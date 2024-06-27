@@ -20,7 +20,7 @@ const Contact = () => {
     e.preventDefault();
     
     try{
-      await axios.post('http://localhost:5000/contact', formData, {
+      await axios.post('https://portfolio-back-i1d6.onrender.com//contact', formData, {
         headers: {
           'Content-Type': 'application/json'
         }
