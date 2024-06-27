@@ -223,7 +223,7 @@ const Intro = () => {
             Creative Developer & Designer
           </AnimatedTitle>
           <p style={{ marginTop: '2rem' }}>
-            Passionate about coding. Full Stack Web Development. Learnt Python, C and C++, JavaScript, MERN, Unity
+            Passionate about coding, MERN Developer, Learnt Python, C and C++, JavaScript,Unity
             Completed 12th from BrightLand School and Pursuing B.Tech (CSE) from ABESIT.
             Enthusiastic in creating interesting unique projects and learning new technologies.
           </p>
