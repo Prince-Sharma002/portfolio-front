@@ -74,7 +74,7 @@ const Footer = () => {
           <ColumnContent>
             <IconWrapper>
               <FaPhone />
-              <span>123-456-7890</span>
+              <span>(+91) 9354718323 </span>
             </IconWrapper>
           </ColumnContent>
         </FooterColumn>
