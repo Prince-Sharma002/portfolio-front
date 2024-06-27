@@ -1,0 +1,398 @@
+/* App.module.css */
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  
+  .heading{
+    color: rgb(63, 63, 63);
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  
+  .section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    color: black;
+    margin: 20px;
+  }
+  
+  .section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  }
+  
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    align-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: rgb(100, 100, 100);
+    border-radius: 15px;
+    grid-column: span 4;
+
+  }
+  
+  .introText {
+    max-width: 100%;
+    text-align: justify;
+  }
+  
+  .introText h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .introText p {
+    font-size: 1em;
+    font-weight: 300;
+    margin: 10px 0 0;
+  }
+  
+  .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .resume{
+    background-color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+  }
+  .resume:hover{
+    background-color: rgb(43, 43, 43);
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .intro {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px;
+    }
+  
+    .introText {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .introText h1 {
+      font-size: 2.5em;
+    }
+  
+    .introText p {
+      font-size: 1.2em;
+    }
+  
+    .avatar {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  /* Projects.module.css */
+  .section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  }
+  
+  .projects {
+    grid-column: span 8;
+    display: grid;
+    gap: 20px;
+  }
+  
+  .projectCard {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .projectCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .projectImage {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .projectImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
+  
+  .projectCard:hover .projectImage img {
+    transform: scale(1.1);
+  }
+  
+  .projectInfo {
+    padding: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .projects {
+      grid-column: span 1;
+    }
+  }
+  
+  /* Skills.module.css */
+  .section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  }
+  
+  .skills {
+    grid-column: span 4;
+  }
+  
+  .skillItem {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .skillName {
+    min-width: 150px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  
+  .skillBar {
+    flex-grow: 1;
+    height: 15px;
+    background-color: #e0e0e0;
+    border-radius: 7.5px;
+    overflow: hidden;
+    margin-left: 10px;
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  }
+  
+  .skillLevel {
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 1s ease;
+  }
+  
+
+  
+
+
+  .lang{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+    
+  }
+  
+  .lang span {
+    background: linear-gradient(135deg, #00c7ca, #00d4d8);
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .lang span:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+    
+    
+
+
+  @media (max-width: 768px) {
+    .skills {
+      grid-column: span 1;
+    }
+  }
+
+
+
+  /* Contact.module.css */
+  .section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  }
+  
+  .contact {
+    grid-column: span 8;
+  }
+  
+  .contact form {
+    margin-top: 1rem;
+    display: grid;
+    gap: 15px;
+  }
+  
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+  }
+  
+  .contact button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact button:hover {
+    background-color: #ff5252;
+  }
+  
+  @media (max-width: 768px) {
+    .contact {
+      grid-column: span 1;
+    }
+  }
+  
+  /* Hobbies.module.css */
+  .section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  }
+  
+  .hobbies {
+    grid-column: span 6;
+  }
+  
+  .hobbyList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1.5rem;
+  }
+  
+  .hobbyItem {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .hobbyItem:hover {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .hobbies {
+      grid-column: span 1;
+    }
+  }
+  
+  /* CustomCursor.module.css */
+  .cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transition: all 0.1s ease;
+    z-index: 9999;
+  }
+  
+  /* Add this to your global CSS or App.module.css */
+  [data-glow] {
+    position: relative;
+  }
+  
+  [data-glow]::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255,107,107,0.3), transparent 50%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  [data-glow]:hover::before {
+    opacity: 1;
+  }
