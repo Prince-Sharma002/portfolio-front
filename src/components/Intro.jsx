@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import styles from './style.module.css';
 import img from '../assets/me.jpeg';
+import CertificatesModal from './CertificatesModal';
 
 const typewriter = keyframes`
   from { width: 0 }
@@ -201,9 +202,31 @@ const SectionTitle = styled.h4`
   color: #007bff;
 `;
 
+// certificates
+const ButtonContainer = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+`;
+
+const Button = styled.button`
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
 const Intro = () => {
   const [showHighlight, setShowHighlight] = useState(false);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
+  const [isCertificatesOpen, setIsCertificatesOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowHighlight(true), 3000);
@@ -212,6 +235,10 @@ const Intro = () => {
 
   const togglePanel = () => {
     setIsPanelOpen(!isPanelOpen);
+  };
+
+  const toggleCertificates = () => {
+    setIsCertificatesOpen(!isCertificatesOpen);
   };
 
   return (
@@ -228,6 +255,7 @@ const Intro = () => {
             Enthusiastic in creating interesting unique projects and learning new technologies.
           </p>
           <button className={styles.resume} onClick={togglePanel}>View Resume</button>
+          <button className={styles.resume} onClick={toggleCertificates} >Show Certificates</button>
         </div>
         <AvatarContainer>
           <ColoredCircle />
@@ -313,6 +341,7 @@ const Intro = () => {
           </ul>
         </ResumeContent>
       </SidePanel>
+      <CertificatesModal isOpen={isCertificatesOpen} onClose={toggleCertificates} />
     </>
   );
 };

@@ -84,8 +84,9 @@
 
   .resume{
     background-color: white;
-    padding: 1rem;
+    padding: 0.6rem;
     margin-top: 1rem;
+    margin-right: 1rem;
     font-family: inherit;
     font-weight: 500;
     font-size: 1rem;
