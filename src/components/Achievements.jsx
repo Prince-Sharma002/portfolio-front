@@ -75,17 +75,17 @@ const achievements = [
   {
     icon: <FaMedal />,
     title: "3rd Position",
-    description: "Secured 3rd place in Mini Project 2nd Year"
+    description: "Secured 3rd place in <Ideathon 2.0> Hackathon"
   },
   {
     icon: <FaAward />,
-    title: "3+ Microsoft Badges",
-    description: "Acheived 3+ Microsoft Badges in different fields of technology"
+    title: "GDGC Core Member",
+    description: "Web Developer Core Member @GDGC ABESIT'24"
   },
   {
     icon: <FaCertificate />,
-    title: "200+ Problems Solved",
-    description: "Solved 200+ DSA problems of GeeksForGeeks"
+    title: "300+ Problems Solved",
+    description: "Solved 300+ DSA problems of GeeksForGeeks"
   }
 ];
 
