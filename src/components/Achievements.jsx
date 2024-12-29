@@ -3,22 +3,21 @@ import styled from 'styled-components';
 import { FaTrophy, FaMedal, FaCertificate, FaAward } from 'react-icons/fa';
 
 const AchievementsSection = styled.section`
-  background: linear-gradient(135deg, white 0%, white  100%);
+  background: linear-gradient(135deg, white 0%, white 100%);
   padding: 4rem 2rem;
   color: black;
   grid-column: span 12;
-  border-radius:20px;
+  border-radius: 20px;
 `;
 
 const SectionTitle = styled.h2`
-
   text-align: center;
   margin-bottom: 3rem;
   position: relative;
   color: rgb(63, 63, 63);
-    font-size: 2.5rem;
-    font-weight: bolder;
-  
+  font-size: 2.5rem;
+  font-weight: bolder;
+
   &::after {
     content: '';
     display: block;
@@ -33,14 +32,15 @@ const AchievementsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
- 
   margin: 0 auto;
 `;
 
-const AchievementCard = styled.div`
+const AchievementCard = styled.a`
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
   transition: all 0.3s ease;
   cursor: pointer;
 
@@ -70,32 +70,36 @@ const achievements = [
   {
     icon: <FaTrophy />,
     title: "SIH'23 Winner",
-    description: "Won first place in the Smart India Hackathon"
+    description: "Won first place in the Smart India Hackathon",
+    link: 'https://www.sih.gov.in' // Example link
   },
   {
     icon: <FaMedal />,
     title: "3rd Position",
-    description: "Secured 3rd place in <Ideathon 2.0> Hackathon"
+    description: "Secured 3rd place in <Ideathon 2.0> Hackathon",
+    link: 'https://www.ideathon.com' // Example link
   },
   {
     icon: <FaAward />,
     title: "GDGC Core Member",
-    description: "Web Developer Core Member @GDGC ABESIT'24"
+    description: "Web Developer Core Member @GDGC ABESIT'24",
+    link: 'https://gdgc.com' // Example link
   },
   {
     icon: <FaCertificate />,
     title: "300+ Problems Solved",
-    description: "Solved 300+ DSA problems of GeeksForGeeks"
+    description: "Solved 300+ DSA problems of GeeksForGeeks",
+    link: 'https://www.geeksforgeeks.org' // Example link
   }
 ];
 
 const Achievements = () => {
   return (
     <AchievementsSection>
-      <SectionTitle>Achievements</SectionTitle>
+      <SectionTitle> Top Achievements</SectionTitle>
       <AchievementsGrid>
         {achievements.map((achievement, index) => (
-          <AchievementCard key={index}>
+          <AchievementCard key={index} href={achievement.link} target="_blank" rel="noopener noreferrer">
             <IconWrapper>{achievement.icon}</IconWrapper>
             <AchievementTitle>{achievement.title}</AchievementTitle>
             <AchievementDescription>{achievement.description}</AchievementDescription>

@@ -47,7 +47,7 @@ const Section = styled.section`
 const ProjectsGrid = styled.div`
   display: grid;
   gap: 20px;
-  grid-column: span 8;
+  grid-column: span 7;
 
   @media (max-width: 768px) {
     grid-column: span 1;

@@ -13,6 +13,8 @@ import styles from './App.module.css';
 import Footer from './components/Footer';
 import Achievements from './components/Achievements';
 import SkillsComponent from './components/SkillsComponent';
+import SkillsCompo from './components/SkillsCompo';
+import AcademicComponent from './components/AcademicComponent';
 
 
 const App = () => {
@@ -21,8 +23,11 @@ const App = () => {
       <CustomCursor />
       <Intro />
       <Projects />
-      <Contact />
-      <Skills />
+      {/* <Contact /> */}
+      {/* <Skills /> */}
+      <Achievements />
+      <SkillsCompo />
+      <AcademicComponent />
       <Hobbies />
       <Footer />
       <ToastContainer />

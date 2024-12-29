@@ -245,7 +245,8 @@ const Intro = () => {
     <>
       <section className={`${styles.section} ${styles.intro}`} data-glow>
         <div className={styles.introText}>
-          <h1>Prince Sharma</h1>
+          <h1>About Me</h1>
+          <p>I'm Prince Sharma</p>
           <AnimatedTitle className={showHighlight ? 'highlight' : ''}>
             Creative Developer & Designer
           </AnimatedTitle>
