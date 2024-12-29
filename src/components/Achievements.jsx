@@ -69,7 +69,7 @@ const AchievementDescription = styled.p`
 const achievements = [
   {
     icon: <FaTrophy />,
-    title: "1st Place Hackathon",
+    title: "SIH'23 Winner",
     description: "Won first place in the Smart India Hackathon"
   },
   {

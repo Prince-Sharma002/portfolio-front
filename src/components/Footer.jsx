@@ -84,6 +84,7 @@ const Footer = () => {
           <ColumnContent>
             <IconWrapper>
               <FaEnvelope />
+              <a href="mailto:prince12845sharma@gmail.com?subject=Contact me%20is%20I like to hear you">Send Email</a>
               <span>prince12845sharma@gmail.com</span>
             </IconWrapper>
           </ColumnContent>

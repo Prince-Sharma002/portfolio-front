@@ -250,9 +250,9 @@ const Intro = () => {
             Creative Developer & Designer
           </AnimatedTitle>
           <p style={{ marginTop: '2rem' }}>
-            Passionate about coding, MERN Developer, Learnt Python, C and C++, JavaScript,Unity
-            Completed 12th from BrightLand School and Pursuing B.Tech (CSE) from ABESIT.
-            Enthusiastic in creating interesting unique projects and learning new technologies.
+            I’m a B.Tech (CSE) student at ABESIT with a passion for creating unique and innovative projects. I specialize in MERN stack, Flask, Machine Learning in Python, Unity, and Firebase, with expertise in programming languages like C, C++, JavaScript, Python, Java, and SQL.
+              <br/>
+            I love exploring new technologies and turning creative ideas into impactful solutions. Let's connect and build something amazing!
           </p>
           <button className={styles.resume} onClick={togglePanel}>View Resume</button>
           <button className={styles.resume} onClick={toggleCertificates} >Show Certificates</button>
@@ -272,17 +272,18 @@ const Intro = () => {
         <ResumeContent>
           <h2>Prince Sharma</h2>
           <p> <strong> Contact :</strong> prince12845sharma@gmail.com | (+91) 9354718323 </p>
-          <p> <strong> Github :</strong> https://github.com/Prince-Sharma002 </p>
-          <p> <strong> Linkedin :</strong> www.linkedin.com/in/prince-sharma-047973253 </p>
+          <p> <strong> Github :</strong> <a href='https://github.com/Prince-Sharma002'> https://github.com/Prince-Sharma002 </a> </p>
+          <p> <strong> Linkedin :</strong> <a href="https://www.linkedin.com/in/prince-sharma-047973253/"> www.linkedin.com/in/prince-sharma-047973253 </a>  </p>
 
           <br />
 
           <SectionTitle>Skills</SectionTitle>
           <ul>
-            <li>MERN Developer</li>
-            <li>Problem Solving (C++)</li>
-            <li>Python (Intermediate)</li>
-            <li>Java (Beginner)</li>
+            <li>Web Development: MERN Stack, Flask, Bootstrap, Tailwind CSS</li>
+            <li>Programming Languages: C, C++, JavaScript, Python, Java, SQL</li>
+            <li>Machine Learning: Python-based ML development</li>
+            <li>Backend & Database: Firebase, MongoDB, MySQL</li>
+            <li>Design Tools: Figma</li>
           </ul>
 
           <br />
@@ -318,10 +319,11 @@ const Intro = () => {
 
           <SectionTitle>Minor Projects</SectionTitle>
           <ul>
-            <li>Contact Management Program - C++, CSV</li>
-            <li>Response Saver Chatbot - Python (Flask), React.js</li>
-            <li>TextEdit Application - React.js (Link: <a href="https://prince-sharma002.github.io/TextEdit/" target="_blank" rel="noopener noreferrer">App Link</a>)</li>
+            <li>Contact Management Program - C++, CSV (<a href="https://github.com/Prince-Sharma002/CPP-Projects"  rel="noopener noreferrer">Github Link</a>) </li>
+            <li>Response Saver Chatbot - Python (Flask), React.js, SCSS (<a href="https://github.com/Prince-Sharma002/Flask-React-chatbot" rel="noopener noreferrer">Github Link</a>)</li>
+            <li>TextEdit Application - React.js (<a href="https://prince-sharma002.github.io/TextEdit/"  rel="noopener noreferrer">App Link</a>)</li>
             <li>Clone web page - Netflix, LinkedIn</li>
+            <li>SPEAKIFY : Reading Application - React.js, Bootstrap (<a href="https://prince-sharma002.github.io/readingApp/" rel="noopener noreferrer">App Link</a>) </li>
           </ul>
 
           <br />
@@ -335,9 +337,9 @@ const Intro = () => {
           <br />
           <SectionTitle>Hobbies</SectionTitle>
           <ul>
-            <li>Writing Articles on platforms like GeeksforGeeks, Medium.</li>
-            <li>Playing chess, which helps in strategic thinking and planning.</li>
-            <li>Playing Guitar and Sketch Car Designs.</li>
+            <li>Writing articles on platforms like GeeksforGeeks and Medium.</li>
+            <li>Playing chess and kho-kho to enhance strategic thinking and teamwork.</li>
+            <li>Enjoying guitar playing and sketching as creative hobbies.</li>
           </ul>
         </ResumeContent>
       </SidePanel>

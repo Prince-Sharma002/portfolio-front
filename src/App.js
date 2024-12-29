@@ -12,6 +12,7 @@ import CustomCursor from './components/CustomCursor';
 import styles from './App.module.css';
 import Footer from './components/Footer';
 import Achievements from './components/Achievements';
+import SkillsComponent from './components/SkillsComponent';
 
 
 const App = () => {
@@ -23,7 +24,6 @@ const App = () => {
       <Contact />
       <Skills />
       <Hobbies />
-      <Achievements />
       <Footer />
       <ToastContainer />
     </div>
