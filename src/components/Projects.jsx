@@ -6,6 +6,7 @@ import leakage from "../assets/leakage.png";
 import sofia from "../assets/sofia.png";
 import studypilot from "../assets/studypilot.png";
 import weather from "../assets/weather.png";
+import complainbox from "../assets/complainbox.png";
 import styles from './style.module.css';
 
 
@@ -121,6 +122,13 @@ const ProjectLink = styled.a`
 
 const projects = [
   {
+    title: "Streamline Complaints Management with Real-Time Insights",
+    description: "Empower your complaint box with an intuitive admin dashboard featuring a dynamic map to visualize complaints geographically. Automatically send email alerts to users for newly registered complaints, ensuring transparency and prompt resolution. - MongoDB, Express.js, Node.js, React.js, MapBox ",
+    image: complainbox,
+    appLink: "https://complain-frontend.vercel.app/",
+    gitLink: "https://tinyurl.com/35panaf8"
+  },
+  {
     title: "SOFIA - Advanced Conversational AI Chatbot",
     description: "A Google PaLM API based Conversational Chatbot with voice input/output and image processing - React.js, Bootstrap.",
     image: sofia,
@@ -155,11 +163,11 @@ const Projects = () => {
       <ProjectsGrid>
         {projects.map((project, index) => (
           <ProjectCard key={index}>
+            <ProjectTitle>{project.title}</ProjectTitle>
             <ProjectImage>
               <img src={project.image} alt={project.title} />
             </ProjectImage>
             <ProjectInfo>
-              <ProjectTitle>{project.title}</ProjectTitle>
               <ProjectDescription>{project.description}</ProjectDescription>
               <ProjectLinks>
                 {project.appLink && (
