@@ -4,6 +4,9 @@ import styled, { keyframes } from 'styled-components';
 import styles from './style.module.css';
 import img from '../assets/me.jpeg';
 import CertificatesModal from './CertificatesModal';
+import { FaInstagram, FaLinkedin, FaTwitter, FaPhone, FaEnvelope,  } from 'react-icons/fa';
+import { HiMiniSpeakerWave } from "react-icons/hi2";
+import { FaGithub } from 'react-icons/fa6';
 
 const typewriter = keyframes`
   from { width: 0 }
@@ -50,9 +53,9 @@ const rotate = keyframes`
 `;
 
 const pulse = keyframes`
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% { transform: scale(1.3); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1.3); }
 `;
 
 const AvatarContainer = styled.div`
@@ -223,6 +226,43 @@ const Button = styled.button`
   }
 `;
 
+const buttonStyle = {
+  backgroundColor: "transparent",
+  color: "#FFD700",
+  fontSize: "1rem",
+  borderColor: "transparent",
+  cursor: "pointer",
+  display: "inline-flex",
+  alignItems: "center",
+  marginLeft  : "0.5rem"
+};
+
+const iconStyle = {
+  display: "inline-block",
+  animation: "pulseRotate 2s infinite",
+};
+
+const animationStyles = `
+  @keyframes pulseRotate {
+    0% {
+      transform: scale(1) rotate(0deg);
+      color: gray;
+    }
+    50% {
+      transform: scale(1.2) rotate(180deg);
+      color: lightblue;
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+      color: gray;
+    }
+  }
+
+  button:hover span {
+    animation: pulseRotate 1s infinite;
+  }
+`;
+
 const Intro = () => {
   const [showHighlight, setShowHighlight] = useState(false);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
@@ -241,6 +281,17 @@ const Intro = () => {
     setIsCertificatesOpen(!isCertificatesOpen);
   };
 
+
+  const speak = (text) => {
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US'; // Set the language
+      window.speechSynthesis.speak(utterance);
+    } else {
+      alert('Speech synthesis not supported in this browser.');
+    }
+  };
+
   return (
     <>
       <section className={`${styles.section} ${styles.intro}`} data-glow>
@@ -250,11 +301,18 @@ const Intro = () => {
           <AnimatedTitle className={showHighlight ? 'highlight' : ''}>
             Creative Developer & Designer
           </AnimatedTitle>
-          <p style={{ marginTop: '2rem' }}>
-            I’m a B.Tech (CSE) student at ABESIT with a passion for creating unique and innovative projects. I specialize in MERN stack, Flask, Machine Learning in Python, Unity, and Firebase, with expertise in programming languages like C, C++, JavaScript, Python, Java, and SQL.
-              <br/>
-            I love exploring new technologies and turning creative ideas into impactful solutions. Let's connect and build something amazing!
-          </p>
+          <style>{animationStyles}</style>
+          <p style={{ marginTop: "2rem" }}>
+        I’m a B.Tech (CSE) student at ABESIT with a passion for creating unique and innovative projects. I specialize in MERN stack, Flask, Machine Learning in Python, Unity, and Firebase, with expertise in programming languages like C, C++, JavaScript, Python, Java, and SQL.
+        <br />
+        I love exploring new technologies and turning creative ideas into impactful solutions. Let's connect and build something amazing!  
+        <button style={buttonStyle} onClick={() => speak("I am a, B Tech Computer Science student at A b e s i t with a passion for creating unique and innovative projects. I specialize in Mern stack, Flask, Machine Learning in Python, Unity, and Firebase, with expertise in programming languages like C, C++, JavaScript, Python, Java, and SQL. I love exploring new technologies and turning creative ideas into impactful solutions. Let's connect and build something amazing")}>
+          <span style={iconStyle} >
+            <HiMiniSpeakerWave />
+          </span>
+        </button>
+      </p>
+          
           <button className={styles.resume} onClick={togglePanel}>View Resume</button>
           <button className={styles.resume} onClick={toggleCertificates} >Show Certificates</button>
         </div>
@@ -272,9 +330,9 @@ const Intro = () => {
         <CloseButton onClick={togglePanel}>&times;</CloseButton>
         <ResumeContent>
           <h2>Prince Sharma</h2>
-          <p> <strong> Contact :</strong> prince12845sharma@gmail.com | (+91) 9354718323 </p>
-          <p> <strong> Github :</strong> <a href='https://github.com/Prince-Sharma002'> https://github.com/Prince-Sharma002 </a> </p>
-          <p> <strong> Linkedin :</strong> <a href="https://www.linkedin.com/in/prince-sharma-047973253/"> www.linkedin.com/in/prince-sharma-047973253 </a>  </p>
+          <p> <strong> Contact :</strong> <FaEnvelope /> <a style={{ textDecoration : "none" ,  }} href="mailto:prince12845sharma@gmail.com?subject=Contact me%20is%20I like to hear you">    prince12845sharma@gmail.com   </a> | <FaPhone /> (+91) 9354718323 </p>
+          <p> <strong> Github :</strong> <FaGithub/>  <a href='https://github.com/Prince-Sharma002'> https://github.com/Prince-Sharma002 </a> </p>
+          <p> <strong> Linkedin :</strong> <FaLinkedin/> <a href="https://www.linkedin.com/in/prince-sharma-047973253/"> www.linkedin.com/in/prince-sharma-047973253 </a>  </p>
 
           <br />
 
@@ -332,13 +390,31 @@ const Intro = () => {
           <ul>
             <li>Smart India Hackathon (SIH) 2023 Winner - Worked on a project tackling Non-revenue water problem.</li>
             <li>IDEATHON 2.0 3rd Position - Developed an application Study Pilot, a management application for college campuses.</li>
-            <li>200+ Problems Solved on GeeksforGeeks Platform.</li>
+            <li>Code-A-Thon 3.0 - 2nd Position.
+Developed SegMap, an interactive map designed for disaster management and environmentalists.</li>
+         
+            <li>300+ Problems Solved on <a href="https://www.geeksforgeeks.org/user/prince128n7xq/"> GeeksforGeeks </a> </li>
+         
           </ul>
           
           <br />
+          <SectionTitle>ACTIVITIES and EXPERIENCE</SectionTitle>
+            <ul>
+                <li>
+                  <p> <strong> 2024 GDGC ABESIT Core Member  </strong></p>
+                  <p>Created the official ABESIT GDGC’24  website  and organized web development events to foster innovation and learning. </p>
+                </li>
+                <li>
+                  <p> <strong>ISRO SIH'24 - Top 47 Team</strong> </p>
+                  <p>
+                  Secured a top 47 position in the Smart India Hackathon 2024, collaborating with ISRO mentors, including E and F-level scientists. Gained valuable insights into solving real-world challenges, enhancing technical expertise, teamwork, and innovation in a high-pressure environment.
+                  </p>
+                </li>
+            </ul>
+          <br/>
           <SectionTitle>Hobbies</SectionTitle>
           <ul>
-            <li>Writing articles on platforms like GeeksforGeeks and Medium.</li>
+            <li>Writing articles on platforms like <a href="https://auth.geeksforgeeks.org/user/prince128n7xq/articles"> GeeksforGeeks </a>  and  <a href="https://medium.com/@prince12845sharma"> Medium </a> </li>
             <li>Playing chess and kho-kho to enhance strategic thinking and teamwork.</li>
             <li>Enjoying guitar playing and sketching as creative hobbies.</li>
           </ul>

@@ -25,6 +25,7 @@ const Hobbies = () => {
         gridColumn: 'span 12',
         position: 'relative',
         overflow: 'hidden',
+        borderRadius : "20px",
       }}
     >
       <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem' }}>

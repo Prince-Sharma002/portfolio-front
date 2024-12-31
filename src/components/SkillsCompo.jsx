@@ -1,13 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect  } from 'react';
+
+
+const Bubble = ({ color }) => {
+  const [position, setPosition] = useState({
+    left: Math.random() * 100,
+    top: Math.random() * 100,
+  });
+
+  const bubbleStyle = {
+    position: 'absolute',
+    left: `${position.left}%`,
+    top: `${position.top}%`,
+    width: '10px',
+    height: '10px',
+    borderRadius: '50%',
+    backgroundColor: color,
+    opacity: 0.3,
+    transition: 'all 3s ease-in-out',
+    zIndex: 0,
+  };
+
+  useEffect(() => {
+    const moveInterval = setInterval(() => {
+      setPosition({
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+      });
+    }, 3000);
+
+    return () => clearInterval(moveInterval);
+  }, []);
+
+  return <div style={bubbleStyle} />;
+};
 
 const SkillsCompo = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
+  const bubbleColors = ['#3B82F6', '#22C55E', '#A855F7', '#F97316'];
 
   const skills = [
     {
       category: "Web Development",
       icon: "🌐",
-      items: ["MERN Stack", "Flask", "Bootstrap", "Tailwind CSS"],
+      items: ["MERN Stack", "Flask", "Bootstrap", "Tailwind CSS" , "Figma"],
       color: "#3B82F6",
       shadowColor: "rgba(59, 130, 246, 0.5)"
     },
@@ -21,14 +56,14 @@ const SkillsCompo = () => {
     {
       category: "Machine Learning",
       icon: "🧠",
-      items: ["Python-based ML development"],
+      items: ["Python-based ML development" , "SKlearn" ],
       color: "#A855F7",
       shadowColor: "rgba(168, 85, 247, 0.5)"
     },
     {
-      category: "Backend & Database",
+      category: "Database & Tools",
       icon: "🗄️",
-      items: ["Firebase", "MongoDB", "MySQL"],
+      items: ["MongoDB" ,"Firebase" , "MySQL" , "Postman" , "Git/GitHub" ],
       color: "#F97316",
       shadowColor: "rgba(249, 115, 22, 0.5)"
     }
@@ -39,13 +74,29 @@ const SkillsCompo = () => {
       maxWidth: '1200px',
       margin: '0 auto',
       padding: '24px',
-      gridColumn: 'span 12', 
+      gridColumn: 'span 12',
+      position: 'relative',
+      overflow: 'hidden',
+      minHeight: '600px',
+    },
+    bubblesContainer: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: 0,
+      pointerEvents: 'none',
+    },
+    content: {
+      position: 'relative',
+      zIndex: 1,
     },
     title: {
       fontSize: '2.5rem',
       fontWeight: 'bold',
       textAlign: 'center',
-      marginBottom: '48px',
+      marginBottom: '1rem',
       background: 'linear-gradient(to right, #3B82F6, #A855F7)',
       WebkitBackgroundClip: 'text',
       WebkitTextFillColor: 'transparent',
@@ -138,10 +189,23 @@ const SkillsCompo = () => {
 
   return (
     <>
-      <style>{keyframes}</style>
-      <div style={styles.container}>
+    <style>{keyframes}</style>
+    <div style={styles.container}>
+      <div style={styles.bubblesContainer}>
+        {[...Array(20)].map((_, i) => (
+          <Bubble
+            key={i}
+            color={bubbleColors[i % bubbleColors.length]}
+          />
+        ))}
+      </div>
+      <div style={styles.content}>
         <h2 style={styles.title}>My Skills</h2>
+        <p style={{textAlign:"center", marginBottom: "3rem"}}>
+          Skill is the unified force of experience, intellect, and passion in their operation
+        </p>
         <div style={styles.grid}>
+          {/* Your existing skills cards mapping */}
           {skills.map((skill, index) => (
             <div 
               key={index}
@@ -177,7 +241,8 @@ const SkillsCompo = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
+  </>
   );
 };
 

@@ -243,7 +243,7 @@ const CertificatesModal = ({ isOpen, onClose }) => {
     },
     { 
       id: 3, 
-      title: "ISRO SIH'24 Top 47 Team", 
+      title: "ISRO SIH'24 - Top 47 Team", 
       date: "2024-12-14", 
       image: isro,
       linkdinLink : "https://www.linkedin.com/posts/prince-sharma-047973253_sih2024-techfixer-isro-activity-7277622696543186944-aGt4?utm_source=share&utm_medium=member_desktop",

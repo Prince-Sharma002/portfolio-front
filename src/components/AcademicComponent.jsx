@@ -1,9 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import bl from './bl.png';
+
+const Bubble = ({ color }) => {
+  const [position, setPosition] = useState({
+    left: Math.random() * 100,
+    top: Math.random() * 100,
+  });
+
+  const bubbleStyle = {
+    position: 'absolute',
+    left: `${position.left}%`,
+    top: `${position.top}%`,
+    width: '10px',
+    height: '10px',
+    borderRadius: '50%',
+    backgroundColor: color,
+    opacity: 0.3,
+    transition: 'all 3s ease-in-out',
+    zIndex: 0,
+  };
+
+  useEffect(() => {
+    const moveInterval = setInterval(() => {
+      setPosition({
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+      });
+    }, 3000);
+
+    return () => clearInterval(moveInterval);
+  }, []);
+
+  return <div style={bubbleStyle} />;
+};
 
 
 const AcademicComponent = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
+  const bubbleColors = ['#3B82F6', '#22C55E', '#A855F7', '#F97316'];
 
   const education = [
     {
@@ -22,7 +56,7 @@ const AcademicComponent = () => {
       status: "Completed",
       color: "#7C3AED",
       backgroundImage: 'url(/path-to-secondary-image.jpg)', // Add the path to your background image
-      Score : "94.8%"
+      Score : "95.7%"
     },
     {
       degree: "High School (ICSE)",
@@ -31,7 +65,7 @@ const AcademicComponent = () => {
       status: "Completed",
       color: "#9333EA",
       backgroundImage: 'url(/path-to-highschool-image.jpg)', // Add the path to your background image
-      Score : "87%",
+      Score : "88%",
     }
   ];
 
@@ -42,6 +76,20 @@ const AcademicComponent = () => {
       padding: '40px 20px',
       position: 'relative',
       gridColumn: 'span 12',
+      overflow: 'hidden',
+    },
+    bubblesContainer: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: 0,
+      pointerEvents: 'none',
+    },
+    content: {
+      position: 'relative',
+      zIndex: 1,
     },
     title: {
       fontSize: '2.5rem',
@@ -168,6 +216,17 @@ const AcademicComponent = () => {
     <>
       <style>{keyframes}</style>
       <div style={styles.container}>
+        
+          <div style={styles.bubblesContainer}>
+            {[...Array(20)].map((_, i) => (
+              <Bubble
+                key={i}
+                color={bubbleColors[i % bubbleColors.length]}
+              />
+            ))}
+          </div>        
+
+        
         <h2 style={styles.title}> Academic Journey</h2>
         <p style={{marginBottom : "3rem"}}> 
             Education is the passport to the future, for tomorrow belongs to those who prepare for it today.

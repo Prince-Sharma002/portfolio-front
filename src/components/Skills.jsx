@@ -33,6 +33,7 @@ const Skills = () => {
   return (
     <section className={`${styles.section} ${styles.skills}`} data-glow>
       <h2  className={styles.heading}>Skills</h2>
+      
       {skills.map((skill, index) => (
         <div key={skill.name} className={styles.skillItem}>
           <span className={styles.skillName}>{skill.name}</span>
