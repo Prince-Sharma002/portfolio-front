@@ -3,8 +3,8 @@ import bl from './bl.png';
 
 const Bubble = ({ color }) => {
   const [position, setPosition] = useState({
-    left: Math.random() * 100,
-    top: Math.random() * 100,
+    left: Math.random() * 150,
+    top: Math.random() * 300,
   });
 
   const bubbleStyle = {
@@ -96,7 +96,7 @@ const AcademicComponent = () => {
       fontWeight: 'bold',
       textAlign: 'center',
       marginBottom: '1rem',
-      background: 'linear-gradient(to right, #4F46E5, #9333EA)',
+      background: 'linear-gradient(to right, #4299e1, #4299e1)',
       WebkitBackgroundClip: 'text',
       WebkitTextFillColor: 'transparent',
       animation: 'fadeIn 0.5s ease-out',
@@ -218,7 +218,7 @@ const AcademicComponent = () => {
       <div style={styles.container}>
         
           <div style={styles.bubblesContainer}>
-            {[...Array(20)].map((_, i) => (
+            {[...Array(30)].map((_, i) => (
               <Bubble
                 key={i}
                 color={bubbleColors[i % bubbleColors.length]}

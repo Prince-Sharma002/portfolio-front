@@ -72,7 +72,7 @@ const SkillsCompo = () => {
   const styles = {
     container: {
       maxWidth: '1200px',
-      margin: '0 auto',
+      margin: '5rem auto',
       padding: '24px',
       gridColumn: 'span 12',
       position: 'relative',
@@ -97,10 +97,11 @@ const SkillsCompo = () => {
       fontWeight: 'bold',
       textAlign: 'center',
       marginBottom: '1rem',
-      background: 'linear-gradient(to right, #3B82F6, #A855F7)',
+      background: 'linear-gradient(to right, #4299e1, #4299e1)',
       WebkitBackgroundClip: 'text',
       WebkitTextFillColor: 'transparent',
       animation: 'fadeIn 0.5s ease-out',
+      color:'#4299e1',
     },
     grid: {
       display: 'grid',
