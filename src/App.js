@@ -10,6 +10,7 @@ import Achievements from './components/Achievements';
 import SkillsCompo from './components/SkillsCompo';
 import AcademicComponent from './components/AcademicComponent';
 import styles from './App.module.css';
+import ProjectBucket from './components/ProjectBucket';
 const App = () => {
 
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <AcademicComponent />
       <Hobbies />
       <Achievements />
+      
       <Footer />
       <ToastContainer />
     </div>

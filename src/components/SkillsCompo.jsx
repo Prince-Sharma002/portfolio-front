@@ -42,21 +42,21 @@ const SkillsCompo = () => {
     {
       category: "Web Development",
       icon: "🌐",
-      items: ["MERN Stack", "Flask", "Bootstrap", "Tailwind CSS" , "Figma"],
+      items: ["MERN Stack", "Flask", "Bootstrap", "Tailwind CSS" , "SCSS" , "Figma"],
       color: "#3B82F6",
       shadowColor: "rgba(59, 130, 246, 0.5)"
     },
     {
       category: "Programming Languages",
       icon: "💻",
-      items: ["C", "C++", "JavaScript", "Python", "Java", "SQL"],
+      items: ["C", "C++", "JavaScript", "Java", "Python",  "SQL"],
       color: "#22C55E",
       shadowColor: "rgba(34, 197, 94, 0.5)"
     },
     {
-      category: "Machine Learning",
+      category: "Machine Learning and Python",
       icon: "🧠",
-      items: ["Python-based ML development" , "SKlearn" ],
+      items: ["Python-based ML development" , "leafmap", "SKlearn" ,"Streamlit" ,  ],
       color: "#A855F7",
       shadowColor: "rgba(168, 85, 247, 0.5)"
     },
@@ -72,7 +72,7 @@ const SkillsCompo = () => {
   const styles = {
     container: {
       maxWidth: '1200px',
-      margin: '5rem auto',
+      margin: '10rem auto 3rem auto',
       padding: '24px',
       gridColumn: 'span 12',
       position: 'relative',

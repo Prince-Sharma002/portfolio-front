@@ -84,12 +84,16 @@ const AchievementCard = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.1);
   height: 100%;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 250px; /* Ensure consistent height */
 
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 `;
+
 
 const IconWrapper = styled.div`
   font-size: 2.5rem;
@@ -107,20 +111,22 @@ const AchievementDescription = styled.p`
   font-size: 0.9rem;
   opacity: 0.8;
   margin-bottom: 1rem;
+  flex-grow: 1;
 `;
-
 
 const ReadMoreLink = styled.a`
   color: #007BFF;
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
-  display: inline-block;
+  margin-top: auto;
+  align-self: flex-start;
   
   &:hover {
     text-decoration: underline;
   }
 `;
+
 
 const StyledArrowIcon = styled(FaArrowRight)`
   position: absolute;
@@ -158,31 +164,39 @@ const StyledLeftArrowIcon = styled(FaArrowLeft)`
   }
 `;
 
+const CardContent = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+`;
+
+
+
 
 // Your achievements array remains the same
 const achievements = [
   {
     icon: <FaTrophy />,
-    title: "SIH'23 Winner",
-    description: "Won first place in the Smart India Hackathon",
+    title: "Smart India Hackathon'23 Winner",
+    description: "secured first place in the prestigious Smart India Hackathon, organized under the Ministry of Jal Shakti.",
     link: 'https://www.linkedin.com/posts/prince-sharma-047973253_smartindiahackathon-digitalabrdruids-sih2023-activity-7144621869306945536-VaMe?utm_source=share&utm_medium=member_desktop' // Example link
   },
   {
     icon: <FaMedal />,
-    title: "3rd Position",
-    description: "Secured 3rd place in <Ideathon 2.0> Hackathon",
+    title: "IDEATHON 2.0 3rd Position",
+    description: "secured 3rd place in the Ideathon 2.0 Hackathon at ABESIT, competing among all 2nd-year students.",
     link: 'https://www.linkedin.com/posts/prince-sharma-047973253_reactjs-firebase-developer-activity-7154081852335525888-J5fU/?utm_source=share&utm_medium=member_desktop' // Example link
   },
   {
     icon: <FaAward />,
-    title: "GDGC Core Member",
-    description: "Web Developer Core Member @GDGC ABESIT'24",
+    title: " Core Member - Web Developer @GDGC ABESIT'24",
+    description: "I’m proud to be a Core Member of the Web Development team at GDGC ABESIT'24, contributing to innovative projects.",
     link: 'https://www.linkedin.com/posts/prince-sharma-047973253_googledevelopers-gdsc-abesit-activity-7245896128531996672-z9zn?utm_source=share&utm_medium=member_desktop' // Example link
   },
   {
     icon: <FaCertificate />,
-    title: "300+ Problems Solved",
-    description: "Solved 300+ DSA problems of GeeksForGeeks",
+    title: "300+ DSA Problems Solved on GeeksForGeeks",
+    description: "I solved 300+ DSA problems on GeeksForGeeks, improving my problem-solving skills and understanding of algorithms.",
     link: 'https://www.geeksforgeeks.org/user/prince128n7xq/' // Example link
   },
   {
@@ -194,7 +208,7 @@ const achievements = [
   {
     icon: <PiCodeThin />,
     title: "Code-A-Thon 3.0 2nd Position",
-    description: " secured the Consolation Prize in the CSE Department's Code-A-Thon 3.0 during Year 3 at ABESIT",
+    description: "secured the Consolation Prize in the CSE Department's Code-A-Thon 3.0 during my 3rd year at ABESIT",
     link: 'https://www.linkedin.com/posts/prince-sharma-047973253_codeathon-teamwork-disastermanagement-activity-7278487141259661316-8a7t/?utm_source=share&utm_medium=member_desktop' // Example link
   },
   // ... other achievements
@@ -250,34 +264,36 @@ const Achievements = () => {
 
   return (
     <AchievementsSection>
-    <SectionTitle>Top Achievements</SectionTitle>
-    <AchievementsContainer>
-      <StyledLeftArrowIcon 
-        onClick={scrollLeft} 
-        show={showLeftArrow}
-      />
-      <AchievementsGrid ref={gridRef}>
-        {achievements.map((achievement, index) => (
-          <AchievementCard key={index} >
-            <IconWrapper>{achievement.icon}</IconWrapper>
-            <AchievementTitle>{achievement.title}</AchievementTitle>
-            <AchievementDescription>{achievement.description}</AchievementDescription>
-            <ReadMoreLink 
-              href={achievement.link} 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Read More
-            </ReadMoreLink>
-          </AchievementCard>
-        ))}
-      </AchievementsGrid>
-      <StyledArrowIcon 
-        onClick={scrollRight} 
-        show={showRightArrow}
-      />
-    </AchievementsContainer>
-  </AchievementsSection>
+      <SectionTitle>Top Achievements</SectionTitle>
+      <AchievementsContainer>
+        <StyledLeftArrowIcon 
+          onClick={scrollLeft} 
+          show={showLeftArrow}
+        />
+        <AchievementsGrid ref={gridRef}>
+          {achievements.map((achievement, index) => (
+            <AchievementCard key={index}>
+              <CardContent>
+                <IconWrapper>{achievement.icon}</IconWrapper>
+                <AchievementTitle>{achievement.title}</AchievementTitle>
+                <AchievementDescription>{achievement.description}</AchievementDescription>
+                <ReadMoreLink 
+                  href={achievement.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Read More
+                </ReadMoreLink>
+              </CardContent>
+            </AchievementCard>
+          ))}
+        </AchievementsGrid>
+        <StyledArrowIcon 
+          onClick={scrollRight} 
+          show={showRightArrow}
+        />
+      </AchievementsContainer>
+    </AchievementsSection>
   );
 };
 
