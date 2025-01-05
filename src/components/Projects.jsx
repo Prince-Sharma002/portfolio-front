@@ -322,7 +322,7 @@ const Projects = () => {
   ];
 
   return (
-    <Section>
+    <Section id="project">
     <SectionTitle>My Projects</SectionTitle>
     <ProjectsGrid>
       {projects.map((project, index) => (

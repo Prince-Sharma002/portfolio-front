@@ -190,10 +190,10 @@ const SkillsCompo = () => {
 
   return (
     <>
-    <style>{keyframes}</style>
-    <div style={styles.container}>
+    <style >{keyframes}</style>
+    <div  id='skills' style={styles.container}>
       <div style={styles.bubblesContainer}>
-        {[...Array(20)].map((_, i) => (
+        {[...Array(30)].map((_, i) => (
           <Bubble
             key={i}
             color={bubbleColors[i % bubbleColors.length]}

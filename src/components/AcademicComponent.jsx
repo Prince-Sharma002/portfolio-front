@@ -215,7 +215,7 @@ const AcademicComponent = () => {
   return (
     <>
       <style>{keyframes}</style>
-      <div style={styles.container}>
+      <div id='academic' style={styles.container}>
         
           <div style={styles.bubblesContainer}>
             {[...Array(30)].map((_, i) => (

@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaYoutube, FaDribbble, Fa
 import { FcSpeaker ,FcMusic , FcBullish, FcAlarmClock , FcCommandLine} from "react-icons/fc";
 import { MdLocalGroceryStore } from "react-icons/md";
 import { PiDiceOneDuotone } from "react-icons/pi";
+import { IoLogoJavascript } from "react-icons/io";
 
 const BucketContainer = styled.div`
   position: absolute;
@@ -20,13 +21,13 @@ const BucketBody = styled.div`
   bottom: 0;
   width: 200px;
   height: 160px;
-  background: linear-gradient(45deg,rgba(255, 252, 77, 0.75),rgba(255, 251, 7, 0.76));
+  background: linear-gradient(45deg,rgb(255, 148, 77),rgba(255, 251, 7, 1));
   border-radius: 0 0 100px 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border: 4px solid rgb(255, 174, 25);
+  border: 4px solid rgb(228, 148, 0);
   border-top: none;
   box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.1);
 `;
@@ -82,6 +83,7 @@ const ProjectBucket = () => {
     { Icon: FcAlarmClock, link: 'https://web-development-szbk.vercel.app/', position: { left: '75%', top: '57%' } },
     { Icon: FcCommandLine, link: 'https://prince-sharma002.github.io/TextEdit/', position: { left: '45%', top: '60%' } },
     { Icon: FcBullish, link: 'https://prince-sharma002-bengaluru-price-prediction-bac-stramlit-o58iyt.streamlit.app/', position: { left: '60%', top: '47%' } },
+    { Icon: IoLogoJavascript, link: 'https://web-development-zlyv.vercel.app/', position: { left: '80%', top: '37%' } },
   ];
 
   return (
