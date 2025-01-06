@@ -5,6 +5,8 @@ import studypilot from "../assets/studypilot.png";
 import weather from "../assets/weather.png";
 import complainbox from "../assets/complainbox.png";
 import titanic from "../assets/titanic.png";
+import missionpillot from "../assets/missionpillot.png";
+
 
 import styles from './style.module.css';
 
@@ -282,11 +284,24 @@ const Projects = () => {
       articleLink: "https://tinyurl.com/35panaf8"
     },
     {
-      title: "Weather Assistant  🌤️",
-      description: "A voice-operated OpenWeatherMap API-based Weather Application for real-time weather information - React.js, SCSS, Firebase Authentication.",
+      title: "Weather Assistant 🌤️",
+      description: "A voice-operated OpenWeatherMap API-based Weather Application for real-time weather information - React.js, SCSS, Firebase Authentication",
       image: weather,
       appLink: "https://my-project-8cd2e.web.app/",
       articleLink: "https://medium.com/@prince12845sharma/building-a-dynamic-weather-application-with-voice-and-text-search-in-react-729fc5d6717e"
+    },
+    {
+      title: "Mission Pilot: The AI-Powered Learning Chatbot 💡",
+      description: "An AI chatbot for mission-critical knowledge management, offering fact extraction, dynamic learning, instant query responses, and JSON-based storage with voice interaction. - React.js, SCSS, Json, Flask, Python",
+      image: missionpillot,
+      gitLink: "https://github.com/Prince-Sharma002/flask-react-chatbot-frontend",
+      articleLink : "https://medium.com/@prince12845sharma/developing-a-text-based-fact-generating-chatbot-in-react-with-flask-backend-87ee8b916155",
+    },
+    {
+      title: "Water Leakage Detector💧 ",
+      description: "Developed a model to detect water leakage in pipelines by analyzing pressure and flow data, enabling early detection and timely maintenance to improve efficiency and reduce water loss. - Python (Django), HTML, CSS, JavaScript.",
+      image: leakage,
+      gitLink: "https://github.com/Prince-Sharma002/Water-Leakage-Detection/tree/master"
     },
     {
       title: "Titanic Survival Prediction 🚢",
@@ -294,24 +309,6 @@ const Projects = () => {
       image: titanic,
       appLink: "https://prince-sharma002-titanic-survey-streamlit-app-wkgjq7.streamlit.app/#titanic-survival-prediction",
       gitLink: "https://github.com/Prince-Sharma002/Water-Leakage-Detection/tree/master"
-    },
-    {
-      title: "Water Leakage Detector💧 ",
-      description: "A Random Forest model to detect water leakage in pipelines based on pressure and flow of water - Python (Django), HTML, CSS, JavaScript.",
-      image: leakage,
-      gitLink: "https://github.com/Prince-Sharma002/Water-Leakage-Detection/tree/master"
-    },
-    {
-      title: "Study Pilot📝",
-      description: "A comprehensive productivity management application for college campuses, integrating a to-do list, notes, stopwatch, lost panel, and academic calendar - React.js, Firestore Database, Tailwind.",
-      image: studypilot,
-      appLink : "https://todo-app-alpha-gilt.vercel.app/",
-    },
-    {
-      title: "Study Pilot📝",
-      description: "A comprehensive productivity management application for college campuses, integrating a to-do list, notes, stopwatch, lost panel, and academic calendar - React.js, Firestore Database, Tailwind.",
-      image: studypilot,
-      appLink : "https://todo-app-alpha-gilt.vercel.app/",
     },
     {
       title: "Study Pilot📝",
