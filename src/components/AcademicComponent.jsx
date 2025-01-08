@@ -65,7 +65,7 @@ const AcademicComponent = () => {
       status: "Completed",
       color: "#9333EA",
       backgroundImage: 'url(/path-to-highschool-image.jpg)', // Add the path to your background image
-      Score : "88%",
+      Score : "90%",
     }
   ];
 

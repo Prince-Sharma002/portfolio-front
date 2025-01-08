@@ -349,7 +349,7 @@ const Intro = () => {
           <SectionTitle>Education</SectionTitle>
           <p>B.Tech (CSE) - ABESIT (Pursuing) - <Highlight>CGPA: 7.98</Highlight> (2026)</p>
           <p>12th - BrightLand School - <Highlight>94.8%</Highlight> (2022)</p>
-          <p>10th - BrightLand School - <Highlight>88%</Highlight> (2020)</p>
+          <p>10th - BrightLand School - <Highlight>90%</Highlight> (2020)</p>
 
           <br />
           <SectionTitle>Academic Projects</SectionTitle>

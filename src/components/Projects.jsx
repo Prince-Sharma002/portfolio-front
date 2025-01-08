@@ -298,7 +298,7 @@ const Projects = () => {
       articleLink : "https://medium.com/@prince12845sharma/developing-a-text-based-fact-generating-chatbot-in-react-with-flask-backend-87ee8b916155",
     },
     {
-      title: "Water Leakage Detector💧 ",
+      title: "Water Leakage Detector💧",
       description: "Developed a model to detect water leakage in pipelines by analyzing pressure and flow data, enabling early detection and timely maintenance to improve efficiency and reduce water loss. - Python (Django), HTML, CSS, JavaScript.",
       image: leakage,
       gitLink: "https://github.com/Prince-Sharma002/Water-Leakage-Detection/tree/master"
