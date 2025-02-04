@@ -90,6 +90,7 @@ const ProjectBucket = () => {
     <BucketContainer>
       <BucketRim />
       <BucketBody>
+        <h1 style={{position : "relative" , bottom : "30px"}}>Mini Projects</h1>
         {icons.map((icon, index) => (
           <IconContainer
             key={index}

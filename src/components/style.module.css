@@ -17,6 +17,8 @@
   @media (max-width: 768px) {
     .container {
       grid-template-columns: 1fr;
+      width: 20rem;
+      max-width: 20rem;
     }
   }
 
@@ -103,6 +105,9 @@
       flex-direction: column;
       text-align: center;
       padding: 30px;
+      grid-column: span 12;
+      display: grid;
+      max-width: 20rem;
     }
   
     .introText {
@@ -115,9 +120,14 @@
     }
   
     .introText p {
-      font-size: 1.2em;
+      font-size: 0.7em;
     }
   
+    .resume{
+      width: 7rem;
+      font-size: 0.6rem;
+    }
+
     .avatar {
       width: 150px;
       height: 150px;
@@ -139,7 +149,7 @@
   }
   
   .projects {
-    grid-column: span 8;
+    grid-column: span 12;
     display: grid;
     gap: 20px;
   }
@@ -197,6 +207,7 @@
   
   .skills {
     grid-column: span 4;
+    max-width: 20rem;
   }
   
   .skillItem {

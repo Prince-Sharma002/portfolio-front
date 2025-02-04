@@ -71,8 +71,8 @@ const AcademicComponent = () => {
 
   const styles = {
     container: {
-      maxWidth: '1200px',
-      margin: '0 auto',
+      maxWidth: window.innerWidth <= 760 ? '22rem' : '1200px',
+      margin:  window.innerWidth <= 760 ? '0rem auto 3rem 0rem' : '10rem auto 3rem auto',
       padding: '40px 20px',
       position: 'relative',
       gridColumn: 'span 12',
@@ -92,7 +92,7 @@ const AcademicComponent = () => {
       zIndex: 1,
     },
     title: {
-      fontSize: '2.5rem',
+      fontSize: window.innerWidth <= 760 ? '2rem' : '2.5rem',
       fontWeight: 'bold',
       textAlign: 'center',
       marginBottom: '1rem',
@@ -136,13 +136,13 @@ const AcademicComponent = () => {
         opacity: isHovered ? 1 : 0.9,
       }),
     degree: {
-      fontSize: '1.5rem',
+      fontSize: window.innerWidth <= 760 ? '1rem' : '1.5rem',
       fontWeight: 'bold',
       marginBottom: '8px',
       color: '#1F2937',
     },
     institution: {
-      fontSize: '1.1rem',
+      fontSize: window.innerWidth <= 760 ? '0.7rem' : '1rem',
       color: '#4B5563',
       marginBottom: '12px',
     },
@@ -152,7 +152,7 @@ const AcademicComponent = () => {
       alignItems: 'center',
     },
     period: {
-      fontSize: '0.9rem',
+      fontSize: window.innerWidth <= 760 ? '0.7rem' : '0.9rem',
       color: '#6B7280',
       display: 'flex',
       alignItems: 'center',
@@ -161,7 +161,7 @@ const AcademicComponent = () => {
     status: (color, isHovered) => ({
       padding: '4px 12px',
       borderRadius: '9999px',
-      fontSize: '0.875rem',
+      fontSize: window.innerWidth <= 760 ? '0.6rem' : '0.875rem',
       backgroundColor: isHovered ? color : '#F3F4F6',
       color: isHovered ? 'white' : color,
       transition: 'all 0.3s ease',
@@ -228,7 +228,7 @@ const AcademicComponent = () => {
 
         
         <h2 style={styles.title}> Academic Journey</h2>
-        <p style={{marginBottom : "3rem"}}> 
+        <p style={{marginBottom : "3rem" , fontSize:"1rem" , textAlign:"center"}}> 
             Education is the passport to the future, for tomorrow belongs to those who prepare for it today.
         </p>
 

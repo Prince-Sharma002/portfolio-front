@@ -71,8 +71,8 @@ const SkillsCompo = () => {
 
   const styles = {
     container: {
-      maxWidth: '1200px',
-      margin: '10rem auto 3rem auto',
+      maxWidth: window.innerWidth <= 760 ? '22rem' : '1200px', // Adjust for mobile
+      margin:  window.innerWidth <= 760 ? '0rem auto 3rem 0rem' : '10rem auto 3rem auto',
       padding: '24px',
       gridColumn: 'span 12',
       position: 'relative',
@@ -93,7 +93,7 @@ const SkillsCompo = () => {
       zIndex: 1,
     },
     title: {
-      fontSize: '2.5rem',
+      fontSize: window.innerWidth <= 760 ? '2rem' : '2.5rem',
       fontWeight: 'bold',
       textAlign: 'center',
       marginBottom: '1rem',
@@ -129,13 +129,13 @@ const SkillsCompo = () => {
       transition: 'all 0.3s ease',
     }),
     icon: (isHovered) => ({
-      fontSize: '24px',
+      fontSize: '1.5rem',
       transform: isHovered ? 'rotate(12deg) scale(1.1)' : 'rotate(0) scale(1)',
       transition: 'transform 0.3s ease',
     }),
     categoryTitle: {
       color: 'white',
-      fontSize: '1.25rem',
+      fontSize:  window.innerWidth <= 760 ? '1rem' : '1.25rem',
       fontWeight: '600',
       margin: 0,
     },
@@ -152,7 +152,7 @@ const SkillsCompo = () => {
     skill: (isHovered, color) => ({
       padding: '4px 12px',
       borderRadius: '9999px',
-      fontSize: '0.875rem',
+      fontSize: window.innerWidth <= 760 ? '0.6rem' : '0.875rem',
       fontWeight: '500',
       backgroundColor: isHovered ? color : '#f3f4f6',
       color: isHovered ? 'white' : '#4b5563',
@@ -166,6 +166,7 @@ const SkillsCompo = () => {
       },
     }),
   };
+  
 
   const keyframes = `
     @keyframes fadeInUp {

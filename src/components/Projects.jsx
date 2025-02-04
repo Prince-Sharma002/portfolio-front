@@ -44,6 +44,17 @@ const Section = styled.section`
   &::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+  @media (max-width: 480px) {
+  section {
+    grid-column: span 12; /* Make it full-width */
+    padding: 20px; /* Reduce padding for smaller screens */
+    margin-top: 1rem; /* Adjust margin for better spacing */
+    height: auto; /* Allow height to adjust dynamically */
+    border-radius: 10px; /* Slightly reduce border radius */
+  }
+}
+
 `;
 
 const SectionTitle = styled.h2`

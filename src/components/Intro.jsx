@@ -60,9 +60,13 @@ const pulse = keyframes`
 
 const AvatarContainer = styled.div`
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 15.625rem;
+  height: 15.625rem;
   margin: 2rem auto;
+
+  @media (max-width: 768px) {
+    height: 200px;
+  }
 `;
 
 const AvatarWrapper = styled.div`
@@ -74,6 +78,16 @@ const AvatarWrapper = styled.div`
   border: 5px solid white;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the image */
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the space */
+    border-radius: 50%; /* Ensures it's circular */
+  }
 
   &::before,
   &::after {
@@ -96,7 +110,17 @@ const AvatarWrapper = styled.div`
     bottom: -50%;
     right: -50%;
   }
+
+  /* Responsive Design for Mobile */
+  @media (max-width: 760px) {
+    width: 150px;
+    height: 150px;
+    margin: 1rem auto;
+    border: 3px solid white; /* Adjust border thickness */
+  }
 `;
+
+
 
 const AvatarImage = styled.img`
   width: 100%;
@@ -130,6 +154,11 @@ const ColoredCircle = styled.div`
     background-color: #00CED1;
     bottom: 20px;
     right: 20px;
+  }
+
+  @media (max-width: 768px) {
+    width:30px;
+    height:30px;
   }
 `;
 
@@ -297,10 +326,21 @@ const Intro = () => {
       <section className={`${styles.section} ${styles.intro}`} data-glow>
         <div id='about' className={styles.introText}>
           <h1>About Me</h1>
+
+          <AvatarContainer>
+          <ColoredCircle />
+          <ColoredCircle />
+          <ColoredCircle />
+          <AvatarWrapper>
+            <AvatarImage src={img} alt="Avatar" />
+          </AvatarWrapper>
+        </AvatarContainer>
+        
           <p>I'm Prince Sharma</p>
           <AnimatedTitle className={showHighlight ? 'highlight' : ''}>
             Creative Developer & Designer
           </AnimatedTitle>
+          
           <style>{animationStyles}</style>
           <p style={{ marginTop: "2rem" }}>
         I’m a B.Tech (CSE) student at ABESIT with a passion for creating unique and innovative projects. I specialize in MERN stack, Flask, Machine Learning in Python, Unity, and Firebase, with expertise in programming languages like C, C++, JavaScript, Python, Java, and SQL.
@@ -316,14 +356,6 @@ const Intro = () => {
           <button className={styles.resume} onClick={togglePanel}>View Resume</button>
           <button className={styles.resume} onClick={toggleCertificates} >Show Certificates</button>
         </div>
-        <AvatarContainer>
-          <ColoredCircle />
-          <ColoredCircle />
-          <ColoredCircle />
-          <AvatarWrapper>
-            <AvatarImage src={img} alt="Avatar" />
-          </AvatarWrapper>
-        </AvatarContainer>
       </section>
 
       <SidePanel className={isPanelOpen ? 'open' : ''}>

@@ -29,10 +29,15 @@ const Hobbies = () => {
         position: 'relative',
         overflow: 'hidden',
         borderRadius : "20px",
+        maxWidth: window.innerWidth <= 760 ? '22rem' : '1200px',
+        margin:  window.innerWidth <= 760 ? '0rem auto 3rem 0rem' : '10rem auto 3rem auto',
+
       }}
     >
-      <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem' }}>
-        Hobbies & Interests
+      <h2 style={{ 
+      fontSize: window.innerWidth <= 760 ? '2rem' : '2.5rem',
+      fontWeight: 'bold', marginBottom: '1rem' }}>
+       My Interests
       </h2>
       <div
         style={{
@@ -40,6 +45,7 @@ const Hobbies = () => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))',
           gap: '1.5rem',
           marginTop: '2rem',
+          padding:"10px",
         }}
       >
         {hobbies.map((hobby) => (
@@ -57,8 +63,8 @@ const Hobbies = () => {
               cursor: 'pointer',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
               position: 'relative',
-              width: '120px',
-              height: '120px',
+              width: window.innerWidth <= 760 ? '50px' : '120px',
+              height: window.innerWidth <= 760 ? '50px' : '120px',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.1)';
@@ -98,7 +104,7 @@ const Hobbies = () => {
               style={{
                 position: 'absolute',
                 bottom: '10px',
-                fontSize: '1rem',
+                fontSize: window.innerWidth <= 760 ? '0.5rem' : '1rem',
                 fontWeight: 'bold',
                 opacity: 0,
                 transform: 'translateY(20px)',
