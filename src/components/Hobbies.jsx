@@ -30,7 +30,7 @@ const Hobbies = () => {
         overflow: 'hidden',
         borderRadius : "20px",
         maxWidth: window.innerWidth <= 760 ? '22rem' : '1200px',
-        margin:  window.innerWidth <= 760 ? '0rem auto 3rem 0rem' : '10rem auto 3rem auto',
+        margin:  window.innerWidth <= 760 ? '0rem auto 3rem 0rem' : '0rem auto 3rem auto',
 
       }}
     >

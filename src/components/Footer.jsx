@@ -26,7 +26,7 @@ const Footer = () => {
       padding: '48px 0',
       width: '100%',
       maxWidth: window.innerWidth <= 760 ? '22rem' : '100%',
-      margin:  window.innerWidth <= 760 ? '0rem auto 3rem 0rem' : '10rem auto 3rem auto',
+      margin:  window.innerWidth <= 760 ? '0rem auto 3rem 0rem' : '2rem auto 3rem auto',
 
       gridColumn: 'span 12',
     },
