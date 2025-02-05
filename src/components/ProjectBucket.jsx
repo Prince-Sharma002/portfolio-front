@@ -6,6 +6,7 @@ import { MdLocalGroceryStore } from "react-icons/md";
 import { PiDiceOneDuotone } from "react-icons/pi";
 import { IoLogoJavascript } from "react-icons/io";
 
+
 const BucketContainer = styled.div`
   position: absolute;
   width: 12.5rem;
@@ -14,6 +15,8 @@ const BucketContainer = styled.div`
   z-index:200;
   top:45rem;
   right:1rem;
+
+
 `;
 
 const BucketBody = styled.div`
@@ -30,7 +33,8 @@ const BucketBody = styled.div`
   border: 4px solid rgb(228, 148, 0);
   border-top: none;
   box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.1);
-`;
+
+  `;
 
 const BucketRim = styled.div`
   position: absolute;
@@ -87,14 +91,24 @@ const ProjectBucket = () => {
   ];
 
   return (
-    <BucketContainer>
+    <BucketContainer
+    style={{
+      width: window.innerWidth <= 760 ? '5rem' : '12.5rem',
+    }}
+
+    >
       <BucketRim />
-      <BucketBody>
+      <BucketBody
+            style={{
+              width: window.innerWidth <= 760 ? '7rem' : '12.5rem',
+            }}
+      >
         <h1 style={{position : "relative" , bottom : "30px"}}>Mini Projects</h1>
         {icons.map((icon, index) => (
           <IconContainer
             key={index}
             style={{
+
               left: icon.position.left,
               top: icon.position.top,
               zIndex: Math.floor(Math.random() * 3) + 1,
@@ -104,6 +118,12 @@ const ProjectBucket = () => {
               href={icon.link}
               target="_blank"
               rel="noopener noreferrer"
+
+              style={{
+                width: window.innerWidth <= 760 ? '20px' : '20px',
+                height: window.innerWidth <= 760 ? '20px' : '20px',
+              }}
+
             >
               <icon.Icon />
             </SocialIcon>

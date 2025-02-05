@@ -186,8 +186,10 @@
   }
   
   @media (max-width: 768px) {
+
+
     .projects {
-      grid-column: span 1;
+      grid-column: span 12;
     }
   }
   

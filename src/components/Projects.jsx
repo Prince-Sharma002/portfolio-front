@@ -45,7 +45,7 @@ const Section = styled.section`
     background: #555;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 760px) {
   section {
     grid-column: span 12; /* Make it full-width */
     padding: 20px; /* Reduce padding for smaller screens */
@@ -157,7 +157,7 @@ const ProjectInfo = styled.div`
 `;
 
 const ProjectTitle = styled.h3`
-  font-size: 1.25rem;
+  fontSize: window.innerWidth <= 760 ? '0.5rem' : '1.5rem',
   font-weight: 600;
   color: #2d3748;
   margin-bottom: 1rem;
@@ -169,15 +169,15 @@ const ProjectTitle = styled.h3`
 `;
 
 const ProjectDescription = styled.p`
-  font-size: 0.95rem;
-  color: #4a5568;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-  display: ${props => props.isExpanded ? 'block' : '-webkit-box'};
-  -webkit-line-clamp: ${props => props.isExpanded ? 'none' : '3'};
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  transition: all 0.3s ease;
+color: #4a5568;
+line-height: 1.5;
+margin-bottom: 1.5rem;
+display: ${props => props.isExpanded ? 'block' : '-webkit-box'};
+-webkit-line-clamp: ${props => props.isExpanded ? 'none' : '3'};
+-webkit-box-orient: vertical;
+overflow: hidden;
+transition: all 0.3s ease;
+fontSize: window.innerWidth <= 760 ? '0.5rem' : '0.7rem',
 `;
 
 const ReadMoreButton = styled.button`
@@ -245,26 +245,50 @@ const ProjectCardcompo = ({ project }) => {
         </ImageOverlay>
       </ProjectImage>
       <ProjectInfo>
-        <ProjectTitle>{project.title}</ProjectTitle>
-        <ProjectDescription isExpanded={isExpanded}>
+        <ProjectTitle
+         style={{
+          fontSize: window.innerWidth <= 760 ? '0.8rem' : '1.2rem',
+         }}
+        >{project.title}</ProjectTitle>
+        <ProjectDescription
+        style={{
+          fontSize: window.innerWidth <= 760 ? '0.7rem' : '0.9rem',
+        }}
+        isExpanded={isExpanded}>
           {project.description}
         </ProjectDescription>
-        <ReadMoreButton onClick={() => setIsExpanded(!isExpanded)}>
+        <ReadMoreButton
+                    style={{
+                      fontSize: window.innerWidth <= 760 ? '0.7rem' : '0.9rem',
+                    }}
+        onClick={() => setIsExpanded(!isExpanded)}>
           {isExpanded ? '↑ Show Less' : '↓ Read More'}
         </ReadMoreButton>
         <ProjectLinks>
           {project.appLink && (
-            <ProjectLink href={project.appLink} target="_blank" rel="noopener noreferrer">
+            <ProjectLink
+            style={{
+              fontSize: window.innerWidth <= 760 ? '0.6rem' : '0.9rem',
+            }}
+            href={project.appLink} target="_blank" rel="noopener noreferrer">
               <FaExternalLinkAlt /> Live Demo
             </ProjectLink>
           )}
           {project.articleLink && (
-            <ProjectLink href={project.articleLink} target="_blank" rel="noopener noreferrer">
+            <ProjectLink
+            style={{
+              fontSize: window.innerWidth <= 760 ? '0.6rem' : '0.9rem',
+            }}
+            href={project.articleLink} target="_blank" rel="noopener noreferrer">
               <FaMedium /> Article
             </ProjectLink>
           )}
           {project.gitLink && (
-            <ProjectLink href={project.gitLink} target="_blank" rel="noopener noreferrer">
+            <ProjectLink
+            style={{
+              fontSize: window.innerWidth <= 760 ? '0.6rem' : '0.9rem',
+            }}
+            href={project.gitLink} target="_blank" rel="noopener noreferrer">
               <FaGithub /> Github
             </ProjectLink>
           )}
@@ -330,7 +354,11 @@ const Projects = () => {
   ];
 
   return (
-    <Section id="project">
+    <Section style={{
+      width: window.innerWidth <= 760 ? '20.5rem' : '1100px',
+      margin:  window.innerWidth <= 760 ? '0rem 1rem 3rem 1rem' : '1.5rem auto 3rem auto',
+
+      }} id="project">
     <SectionTitle>My Projects</SectionTitle>
     <ProjectsGrid>
       {projects.map((project, index) => (
