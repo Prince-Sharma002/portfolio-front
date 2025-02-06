@@ -33,6 +33,14 @@ const BucketBody = styled.div`
   border: 4px solid rgb(228, 148, 0);
   border-top: none;
   box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+  
+  @media (max-width: 760px) {
+      font-size: 0.6rem;
+      width:  100px;
+      height:  6rem; 
+      bottom:-750px; 
+      border: 2px solid rgb(228, 148, 0);
+    }
 
   `;
 
@@ -45,6 +53,12 @@ const BucketRim = styled.div`
   left: -10px;
   border-radius: 15px;
   z-index: 2;
+
+  @media (max-width: 760px) {
+      width: 8.2rem;
+      height: 5px; 
+      top: 852px; 
+    }
 `;
 
 const IconContainer = styled.div`
@@ -120,8 +134,8 @@ const ProjectBucket = () => {
               rel="noopener noreferrer"
 
               style={{
-                width: window.innerWidth <= 760 ? '20px' : '20px',
-                height: window.innerWidth <= 760 ? '20px' : '20px',
+                width: window.innerWidth <= 760 ? '20px' : '40px',
+                height: window.innerWidth <= 760 ? '20px' : '40px',
               }}
 
             >

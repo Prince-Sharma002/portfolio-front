@@ -12,7 +12,11 @@ const AchievementsSection = styled.section`
   grid-column: span 12;
   border-radius: 20px;
   overflow: hidden; // Ensure no scrollbar appears outside the section
-`;
+  
+  @media (max-width: 760px) {
+   width:21rem;
+  }
+  `;
 
 const SectionTitle = styled.h2`
   text-align: center;
@@ -29,6 +33,10 @@ const SectionTitle = styled.h2`
     height: 3px;
     background-color: #FFC107;
     margin: 0.5rem auto 0;
+  }
+
+  @media (max-width: 760px) {
+    font-size: 1.5rem;
   }
 `;
 
@@ -72,7 +80,7 @@ const AchievementsGrid = styled.div`
   }
 
   @media (max-width: 480px) {
-    grid-auto-columns: calc(100% - 20px);
+    grid-auto-columns: calc(95% - 20px);
   }
 `;
 
@@ -99,12 +107,23 @@ const IconWrapper = styled.div`
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #FFC107;
+
+  @media (max-width: 760px) {
+      font-size: 1rem;  
+    }
+  }
+
 `;
 
 const AchievementTitle = styled.h3`
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   color: #333;
+
+    @media (max-width: 760px) {
+      font-size: 0.8rem;  
+    }
+  }
 `;
 
 const AchievementDescription = styled.p`
@@ -112,6 +131,12 @@ const AchievementDescription = styled.p`
   opacity: 0.8;
   margin-bottom: 1rem;
   flex-grow: 1;
+
+      @media (max-width: 760px) {
+      font-size: 0.6rem;  
+    }
+  }
+
 `;
 
 const ReadMoreLink = styled.a`
@@ -125,6 +150,12 @@ const ReadMoreLink = styled.a`
   &:hover {
     text-decoration: underline;
   }
+
+  @media (max-width: 760px) {
+      font-size: 0.6rem;  
+  }
+
+
 `;
 
 
