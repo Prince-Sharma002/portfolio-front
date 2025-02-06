@@ -38,6 +38,8 @@ const ModalBackground = styled.div`
   align-items: center;
   z-index: 1000;
   backdrop-filter: blur(5px);
+
+
 `;
 
 const ModalContent = styled.div`
@@ -56,6 +58,8 @@ const ModalContent = styled.div`
     min-width: auto;
     width: 90%;
   }
+
+
   
   &::-webkit-scrollbar {
     width: 8px;
@@ -105,6 +109,11 @@ const CertificateCard = styled.div`
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
+
+  @media (max-width: 760px) {
+    font-size: 0.6rem; 
+    left:-90px; 
+    }
 `;
 
 const ImageContainer = styled.div`

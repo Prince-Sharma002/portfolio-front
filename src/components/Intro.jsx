@@ -184,6 +184,10 @@ const SidePanel = styled.div`
   &.open {
     animation: ${SidePanelSlide} 0.3s forwards;
   }
+
+  @media (max-width: 760px) {
+      width:90%;
+    }
 `;
 
 const CloseButton = styled.button`
@@ -194,6 +198,10 @@ const CloseButton = styled.button`
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+
+  @media (max-width: 760px) {
+      right:2rem;  
+    }
 `;
 
 const ResumeContent = styled.div`
@@ -221,6 +229,11 @@ const ResumeContent = styled.div`
   li {
     margin-bottom: 0.5rem;
   }
+
+  @media (max-width: 760px) {
+      width:90%; 
+      font-size:0.7rem;
+    }
 `;
 
 const Highlight = styled.span`

@@ -39,6 +39,7 @@ const BucketBody = styled.div`
       width:  100px;
       height:  6rem; 
       bottom:-750px; 
+      right:10px;
       border: 2px solid rgb(228, 148, 0);
     }
 
@@ -55,6 +56,7 @@ const BucketRim = styled.div`
   z-index: 2;
 
   @media (max-width: 760px) {
+      left: -50px;
       width: 8.2rem;
       height: 5px; 
       top: 852px; 
@@ -115,6 +117,7 @@ const ProjectBucket = () => {
       <BucketBody
             style={{
               width: window.innerWidth <= 760 ? '7rem' : '12.5rem',
+            
             }}
       >
         <h1 style={{position : "relative" , bottom : "30px"}}>Mini Projects</h1>
