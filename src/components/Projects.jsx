@@ -6,6 +6,8 @@ import weather from "../assets/weather.png";
 import complainbox from "../assets/complainbox.png";
 import titanic from "../assets/titanic.png";
 import missionpillot from "../assets/missionpillot.png";
+import segmap from "../assets/segmap.png";
+import gdgc from "../assets/gdgc.png";
 
 
 import styles from './style.module.css';
@@ -185,6 +187,7 @@ const ProjectTech = styled.div`
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 0.5rem;
+  margin-bottom: 1rem;
 
   span {
     background: #2a2a3e;
@@ -209,7 +212,6 @@ const ReadMoreButton = styled.button`
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
-  margin-bottom: 1rem;
 
   &:hover {
     color: #2b6cb0;
@@ -276,11 +278,7 @@ const ProjectCardcompo = ({ project }) => {
           {project.description}
         </ProjectDescription>
 
-        <ProjectTech>
-          {project.tech.map((tech, index) => (
-            <span key={index}>{tech}</span>
-          ))}
-        </ProjectTech>
+
         
         <ReadMoreButton
                     style={{
@@ -289,6 +287,13 @@ const ProjectCardcompo = ({ project }) => {
         onClick={() => setIsExpanded(!isExpanded)}>
           {isExpanded ? '↑ Show Less' : '↓ Read More'}
         </ReadMoreButton>
+
+        <ProjectTech>
+          {project.tech.map((tech, index) => (
+            <span key={index}>{tech}</span>
+          ))}
+        </ProjectTech>
+
         <ProjectLinks>
           {project.appLink && (
             <ProjectLink
@@ -334,6 +339,22 @@ const Projects = () => {
       image: complainbox,
       appLink: "https://complain-frontend.vercel.app/",
       gitLink: "https://github.com/Prince-Sharma002/Complain-Portal-MERN"
+    },
+    {
+      title: "SegMap: An interactive map for disaster response and environmental monitoring🌍",
+      description: "SegMap is a smart mapping platform designed to enhance disaster management and environmental monitoring with realtime Message support.",
+      tech: ["MERN Stack", "Leaflet Map","crypto-js", "reactflow", ],
+      image: segmap,
+      appLink: "https://geo-mesh-front.vercel.app/",
+      gitLink: "https://github.com/Prince-Sharma002/GeoMesh-Front"
+    },
+    {
+      title: "ABESIT GDGC’24 website",
+      description: "the official ABESIT GDGC’24 website and organized web development events to foster innovation and learning.",
+      tech: ["Next.js", "acentricity ui","Tailwindcss", "Javascript" ],
+      image: gdgc,
+      appLink: "https://main.d34x8j0y50canp.amplifyapp.com/",
+      gitLink: "https://github.com/GDGC-abesit/gdgc-website"
     },
     {
       title: "SOFIA - Advanced Conversational AI Chatbot 🤖",
