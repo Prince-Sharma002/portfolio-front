@@ -180,6 +180,24 @@ transition: all 0.3s ease;
 fontSize: window.innerWidth <= 760 ? '0.5rem' : '0.7rem',
 `;
 
+const ProjectTech = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+
+  span {
+    background: #2a2a3e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+  }
+`;
+
+const ProjectLinksContainer = styled.div`
+`;
+
 const ReadMoreButton = styled.button`
   background: none;
   border: none;
@@ -257,6 +275,13 @@ const ProjectCardcompo = ({ project }) => {
         isExpanded={isExpanded}>
           {project.description}
         </ProjectDescription>
+
+        <ProjectTech>
+          {project.tech.map((tech, index) => (
+            <span key={index}>{tech}</span>
+          ))}
+        </ProjectTech>
+        
         <ReadMoreButton
                     style={{
                       fontSize: window.innerWidth <= 760 ? '0.7rem' : '0.9rem',
@@ -301,57 +326,65 @@ const ProjectCardcompo = ({ project }) => {
 
 const Projects = () => {
 
-
-
   const projects = [
     {
-      title: "Streamline Complaints Management with Real-Time Insights 📩 ",
-      description: "Streamline your complaint box with a dashboard and dynamic map. Notify users of complaint progress via email for transparency and efficiency - MERN Stack, MapBox Map",
+      title: "Streamline Complaints Management with Real-Time Insights 📩",
+      description: "Streamline your complaint box with a dashboard and dynamic map. Notify users of complaint progress via email for transparency and efficiency.",
+      tech: ["MERN Stack", "MapBox Map"],
       image: complainbox,
       appLink: "https://complain-frontend.vercel.app/",
       gitLink: "https://github.com/Prince-Sharma002/Complain-Portal-MERN"
     },
     {
       title: "SOFIA - Advanced Conversational AI Chatbot 🤖",
-      description: "A Google PaLM API based Conversational Chatbot with voice input/output and image processing - React.js, Bootstrap.",
+      description: "A Google PaLM API-based Conversational Chatbot with voice input/output and image processing.",
+      tech: ["React.js", "Bootstrap", "Google PaLM API"],
       image: sofia,
       appLink: "https://palmapi-67c47.web.app/",
       articleLink: "https://tinyurl.com/35panaf8"
     },
     {
       title: "Weather Assistant 🌤️",
-      description: "A voice-operated OpenWeatherMap API-based Weather Application for real-time weather information - React.js, SCSS, Firebase Authentication",
+      description: "A voice-operated OpenWeatherMap API-based Weather Application for real-time weather information.",
+      tech: ["React.js", "SCSS", "Firebase Authentication", "OpenWeatherMap API"],
       image: weather,
       appLink: "https://my-project-8cd2e.web.app/",
       articleLink: "https://medium.com/@prince12845sharma/building-a-dynamic-weather-application-with-voice-and-text-search-in-react-729fc5d6717e"
     },
     {
       title: "Mission Pilot: The AI-Powered Learning Chatbot 💡",
-      description: "An AI chatbot for mission-critical knowledge management, offering fact extraction, dynamic learning, instant query responses, and JSON-based storage with voice interaction. - React.js, SCSS, Json, Flask, Python",
+      description: "An AI chatbot for mission-critical knowledge management, offering fact extraction, dynamic learning, instant query responses, and JSON-based storage with voice interaction.",
+      tech: ["React.js", "SCSS", "JSON", "Flask", "Python"],
       image: missionpillot,
       gitLink: "https://github.com/Prince-Sharma002/flask-react-chatbot-frontend",
-      articleLink : "https://medium.com/@prince12845sharma/developing-a-text-based-fact-generating-chatbot-in-react-with-flask-backend-87ee8b916155",
+      articleLink: "https://medium.com/@prince12845sharma/developing-a-text-based-fact-generating-chatbot-in-react-with-flask-backend-87ee8b916155"
     },
     {
-      title: "Water Leakage Detector💧",
-      description: "Developed a model to detect water leakage in pipelines by analyzing pressure and flow data, enabling early detection and timely maintenance to improve efficiency and reduce water loss. - Python (Django), HTML, CSS, JavaScript.",
+      title: "Water Leakage Detector 💧",
+      description: "Developed a model to detect water leakage in pipelines by analyzing pressure and flow data, enabling early detection and timely maintenance to improve efficiency and reduce water loss.",
+      tech: ["Python", "Django", "HTML", "CSS", "JavaScript"],
       image: leakage,
       gitLink: "https://github.com/Prince-Sharma002/Water-Leakage-Detection/tree/master"
     },
     {
       title: "Titanic Survival Prediction 🚢",
-      description: "I developed using a DecisionTreeClassifier and deployed with Streamlit for an intuitive and interactive user experience.",
+      description: "Developed using a DecisionTreeClassifier and deployed with Streamlit for an intuitive and interactive user experience.",
+      tech: ["Python", "DecisionTreeClassifier", "Streamlit"],
       image: titanic,
       appLink: "https://prince-sharma002-titanic-survey-streamlit-app-wkgjq7.streamlit.app/#titanic-survival-prediction",
       gitLink: "https://github.com/Prince-Sharma002/Water-Leakage-Detection/tree/master"
     },
     {
-      title: "Study Pilot📝",
-      description: "A comprehensive productivity management application for college campuses, integrating a to-do list, notes, stopwatch, lost panel, and academic calendar - React.js, Firestore Database, Tailwind.",
+      title: "Study Pilot 📝",
+      description: "A comprehensive productivity management application for college campuses, integrating a to-do list, notes, stopwatch, lost panel, and academic calendar.",
+      tech: ["React.js", "Firestore Database", "Tailwind"],
       image: studypilot,
-      appLink : "https://todo-app-alpha-gilt.vercel.app/",
-    },
-  ];
+      appLink: "https://todo-app-alpha-gilt.vercel.app/"
+    }
+];
+
+
+
 
   return (
     <Section style={{

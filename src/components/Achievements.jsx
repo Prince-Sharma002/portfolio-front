@@ -80,7 +80,7 @@ const AchievementsGrid = styled.div`
   }
 
   @media (max-width: 480px) {
-    grid-auto-columns: calc(95% - 20px);
+    grid-auto-columns: calc(100% - 20px);
   }
 `;
 
