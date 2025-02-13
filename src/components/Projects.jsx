@@ -179,7 +179,7 @@ display: ${props => props.isExpanded ? 'block' : '-webkit-box'};
 -webkit-box-orient: vertical;
 overflow: hidden;
 transition: all 0.3s ease;
-fontSize: window.innerWidth <= 760 ? '0.5rem' : '0.7rem',
+fontSize: window.innerWidth <= 760 ? '0.5rem' : '0.7rem';
 `;
 
 const ProjectTech = styled.div`
@@ -195,6 +195,12 @@ const ProjectTech = styled.div`
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.7rem;
+  }
+
+  @media (max-width: 760px) {
+  span{
+    font-size:0.5rem;
+  }  
   }
 `;
 
