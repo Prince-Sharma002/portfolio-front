@@ -42,7 +42,9 @@ const SkillsCompo = () => {
     {
       category: "Web Development",
       icon: "🌐",
-      items: ["MERN Stack", "Flask", "Bootstrap", "Tailwind CSS" , "SCSS" , "Figma" , "Firebase Authentication"],
+      items: ["MERN Stack", "Next.js", "Flask", "Bootstrap", "Tailwind CSS" , "SCSS" , "Figma" , "Firebase Authentication",
+        "Acentricity ui", "Shadcn ui"
+      ],
       color: "#3B82F6",
       shadowColor: "rgba(59, 130, 246, 0.5)"
     },
