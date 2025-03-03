@@ -59,7 +59,7 @@ const AcademicComponent = () => {
       Score : "95.7%"
     },
     {
-      degree: "High School (ICSE)",
+      degree: "High School (CBSE)",
       institution: "SGRR Public School",
       period: "2018-2020",
       status: "Completed",
