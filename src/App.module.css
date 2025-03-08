@@ -19,9 +19,25 @@
 }
 
 
+.intro {
+  width: 40% !important; /* Force 40% width for intro section */
+  min-width: 400px; /* Prevent it from getting too small */
+  height: auto !important; /* Allow it to adjust height as needed */
+}
+
+
 
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
   }
+
+  .introText {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  
+  .introText > * {
+    grid-column: span 4;
+  }
+
 }

@@ -34,7 +34,7 @@ const Section = styled.section`
   }
 
   &::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background:rgb(255, 157, 230);
     border-radius: 10px;
   }
 
@@ -60,7 +60,7 @@ const Section = styled.section`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
   color: #2d3748;
@@ -71,7 +71,7 @@ const SectionTitle = styled.h2`
 
 const ProjectsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   padding: 1rem;
 
@@ -273,12 +273,12 @@ const ProjectCardcompo = ({ project }) => {
       <ProjectInfo>
         <ProjectTitle
          style={{
-          fontSize: window.innerWidth <= 760 ? '0.8rem' : '1.2rem',
+          fontSize: window.innerWidth <= 760 ? '0.8rem' : '0.9rem',
          }}
         >{project.title}</ProjectTitle>
         <ProjectDescription
         style={{
-          fontSize: window.innerWidth <= 760 ? '0.7rem' : '0.9rem',
+          fontSize: window.innerWidth <= 760 ? '0.7rem' : '0.7rem',
         }}
         isExpanded={isExpanded}>
           {project.description}
@@ -288,7 +288,7 @@ const ProjectCardcompo = ({ project }) => {
         
         <ReadMoreButton
                     style={{
-                      fontSize: window.innerWidth <= 760 ? '0.7rem' : '0.9rem',
+                      fontSize: window.innerWidth <= 760 ? '0.7rem' : '0.7rem',
                     }}
         onClick={() => setIsExpanded(!isExpanded)}>
           {isExpanded ? '↑ Show Less' : '↓ Read More'}
@@ -304,7 +304,7 @@ const ProjectCardcompo = ({ project }) => {
           {project.appLink && (
             <ProjectLink
             style={{
-              fontSize: window.innerWidth <= 760 ? '0.6rem' : '0.9rem',
+              fontSize: window.innerWidth <= 760 ? '0.6rem' : '0.7rem',
             }}
             href={project.appLink} target="_blank" rel="noopener noreferrer">
               <FaExternalLinkAlt /> Live Demo
@@ -313,7 +313,7 @@ const ProjectCardcompo = ({ project }) => {
           {project.articleLink && (
             <ProjectLink
             style={{
-              fontSize: window.innerWidth <= 760 ? '0.6rem' : '0.9rem',
+              fontSize: window.innerWidth <= 760 ? '0.6rem' : '0.7rem',
             }}
             href={project.articleLink} target="_blank" rel="noopener noreferrer">
               <FaMedium /> Article
@@ -322,7 +322,7 @@ const ProjectCardcompo = ({ project }) => {
           {project.gitLink && (
             <ProjectLink
             style={{
-              fontSize: window.innerWidth <= 760 ? '0.6rem' : '0.9rem',
+              fontSize: window.innerWidth <= 760 ? '0.6rem' : '0.7rem',
             }}
             href={project.gitLink} target="_blank" rel="noopener noreferrer">
               <FaGithub /> Github
@@ -415,8 +415,9 @@ const Projects = () => {
 
   return (
     <Section style={{
-      width: window.innerWidth <= 760 ? '20.5rem' : '1100px',
-      margin:  window.innerWidth <= 760 ? '0rem 1rem 3rem 1rem' : '1.5rem auto 3rem auto',
+      width: window.innerWidth <= 760 ? '20.5rem' : '100%', // Changed from fixed 1100px to 60%
+    maxWidth: '1100px', // Added max-width to prevent it from getting too large
+    margin: window.innerWidth <= 760 ? '0rem 1rem 3rem 1rem' : '1.5rem auto 3rem auto',
 
       }} id="project">
     <SectionTitle>My Projects</SectionTitle>

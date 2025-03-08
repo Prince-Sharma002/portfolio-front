@@ -15,7 +15,9 @@ const BucketContainer = styled.div`
   z-index:200;
   top:45rem;
   right:1rem;
-
+  @media (max-width: 768px) {  /* Target mobile screens */
+    top: 52rem;
+  }
 
 `;
 

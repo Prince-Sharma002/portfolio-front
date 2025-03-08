@@ -73,8 +73,8 @@ const SkillsCompo = () => {
 
   const styles = {
     container: {
-      maxWidth: window.innerWidth <= 760 ? '22rem' : '1200px', // Adjust for mobile
-      margin:  window.innerWidth <= 760 ? '0rem auto 3rem 0rem' : '10rem auto 3rem auto',
+      maxWidth: window.innerWidth <= 760 ? '22rem' : '1000px', // Adjust for mobile
+      margin:  window.innerWidth <= 760 ? '0rem auto 3rem 0rem' : '7rem auto 0rem auto',
       padding: '24px',
       gridColumn: 'span 12',
       position: 'relative',
@@ -154,7 +154,7 @@ const SkillsCompo = () => {
     skill: (isHovered, color) => ({
       padding: '4px 12px',
       borderRadius: '9999px',
-      fontSize: window.innerWidth <= 760 ? '0.6rem' : '0.875rem',
+      fontSize: window.innerWidth <= 760 ? '0.6rem' : '0.7rem',
       fontWeight: '500',
       backgroundColor: isHovered ? color : '#f3f4f6',
       color: isHovered ? 'white' : '#4b5563',

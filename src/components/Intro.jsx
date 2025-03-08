@@ -23,6 +23,8 @@ const highlightAnimation = keyframes`
   100% { background-size: 100% 100%; }
 `;
 
+
+
 const AnimatedTitle = styled.p`
   font-size: 0.5rem;
   color: #333;
@@ -355,11 +357,14 @@ const Intro = () => {
           </AnimatedTitle>
           
           <style>{animationStyles}</style>
-          <p style={{ marginTop: "2rem" }}>
-        I’m a B.Tech (CSE) student at ABESIT with a passion for creating unique and innovative projects. I specialize in MERN stack, Flask, Machine Learning in Python, Unity, and Firebase, with expertise in programming languages like C, C++, JavaScript, Python, Java, and SQL.
+          <p style={{ marginTop: "2rem" , 
+            fontSize : "0.8rem",
+          }}>
+         A tech enthusiast, problem solver, and creative thinker. As a <strong> Smart India Hackathon 2023 Winner </strong> and <strong> SIH 2024 (ISRO) </strong> Finalist, I thrive on innovation and real-world impact. I’m also a <strong> Core Member at GDGC 2024 </strong>, actively contributing to the tech community. My expertise spans MERN stack development, Machine Learning (Python), Flask, Firebase, MySQL, and Kali Linux. 
+
         <br />
-        I love exploring new technologies and turning creative ideas into impactful solutions. Let's connect and build something amazing!  
-        <button style={buttonStyle} onClick={() => speak("I am a, B Tech Computer Science student at A b e s i t with a passion for creating unique and innovative projects. I specialize in Mern stack, Flask, Machine Learning in Python, Unity, and Firebase, with expertise in programming languages like C, C++, JavaScript, Python, Java, and SQL. I love exploring new technologies and turning creative ideas into impactful solutions. Let's connect and build something amazing")}>
+        Beyond coding, I’m passionate about music and love playing the guitar in my free time. Traveling fuels my creativity, and I enjoy exploring new places and perspectives. Always eager to learn, build, and make an impact! 🚀🎸🌍
+        <button style={buttonStyle} onClick={() => speak("Hi, I'm Prince Sharma, a tech enthusiast, problem solver, and creative thinker. As a Smart India Hackathon 2023 Winner and SIH 2024 (ISRO) Finalist, I thrive on innovation and real-world impact. I’m also a Core Member at GDGC 2024, actively contributing to the tech community. My expertise spans MERN stack development, Machine Learning (Python), Flask, Firebase, MySQL, and Kali Linux.Beyond coding, I’m passionate about music and love playing the guitar in my free time. Traveling fuels my creativity, and I enjoy exploring new places and perspectives. Always eager to learn, build, and make an impact! 🚀🎸🌍")}>
           <span style={iconStyle} >
             <HiMiniSpeakerWave />
           </span>

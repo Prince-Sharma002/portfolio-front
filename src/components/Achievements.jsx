@@ -5,6 +5,22 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { IoMdRocket } from "react-icons/io";
 import { PiCodeThin } from "react-icons/pi";
 
+// Import your SIH image
+import sih from "../assets/achivements/sih.jpeg";
+import ideathon from "../assets/achivements/ideathon.jpg";
+import codeathon from "../assets/achivements/codeathon.jpg";
+import sih24 from "../assets/achivements/sih24.jpg";
+import gfg from "../assets/achivements/gfg.png";
+import gdgc from "../assets/achivements/gdgc.png";
+
+// Import or define other placeholder images
+// You'll need to replace these with your actual image paths
+const placeholderImage1 = "https://via.placeholder.com/300x200";
+const placeholderImage2 = "https://via.placeholder.com/300x200";
+const placeholderImage3 = "https://via.placeholder.com/300x200";
+const placeholderImage4 = "https://via.placeholder.com/300x200";
+const placeholderImage5 = "https://via.placeholder.com/300x200";
+
 const AchievementsSection = styled.section`
   background: linear-gradient(135deg, white 0%, white 100%);
   padding: 4rem 2rem;
@@ -16,7 +32,7 @@ const AchievementsSection = styled.section`
   @media (max-width: 760px) {
    width:21rem;
   }
-  `;
+`;
 
 const SectionTitle = styled.h2`
   text-align: center;
@@ -84,8 +100,43 @@ const AchievementsGrid = styled.div`
   }
 `;
 
+
+const IconWrapper = styled.div`
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #FFC107;
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease-in-out; /* Smooth hiding transition */
+
+  @media (max-width: 760px) {
+    font-size: 1rem;  
+  }
+`;
+
+const ReadMoreLink = styled.a`
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: auto;
+  align-self: flex-start;
+  position: relative;
+  z-index: 2;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 760px) {
+    font-size: 0.6rem;  
+  }
+`;
+
 const AchievementCard = styled.div`
-  background-color: rgba(255, 255, 255, 0.1);
+  background-image: url(${props => props.backgroundImage});
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
   padding: 1.5rem;
   transition: all 0.3s ease;
@@ -95,68 +146,66 @@ const AchievementCard = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 250px; /* Ensure consistent height */
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay */
+    z-index: 1;
+  }
 
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-`;
 
 
-const IconWrapper = styled.div`
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #FFC107;
-
-  @media (max-width: 760px) {
-      font-size: 1rem;  
+    
+    &::before {
+      background: rgba(255, 255, 255, 0.1); /* Less opaque on hover */
     }
-  }
 
+    h3, p, ${IconWrapper}, ${ReadMoreLink} { 
+      color: transparent; /* Hide title, description, icon, and link */
+    }
+
+  }
 `;
+
+
 
 const AchievementTitle = styled.h3`
-  font-size: 1.25rem;
+  font-size: 0.8rem;
   margin-bottom: 0.5rem;
   color: #333;
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
 
-    @media (max-width: 760px) {
-      font-size: 0.8rem;  
-    }
+  @media (max-width: 760px) {
+    font-size: 0.8rem;  
   }
 `;
 
 const AchievementDescription = styled.p`
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   opacity: 0.8;
   margin-bottom: 1rem;
   flex-grow: 1;
-
-      @media (max-width: 760px) {
-      font-size: 0.6rem;  
-    }
-  }
-
-`;
-
-const ReadMoreLink = styled.a`
-  color: #007BFF;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  margin-top: auto;
-  align-self: flex-start;
-  
-  &:hover {
-    text-decoration: underline;
-  }
+  position: relative;
+  z-index: 2;
+  color: #333;
 
   @media (max-width: 760px) {
-      font-size: 0.6rem;  
+    font-size: 0.6rem;  
   }
-
-
 `;
+
 
 
 const StyledArrowIcon = styled(FaArrowRight)`
@@ -199,54 +248,58 @@ const CardContent = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 2;
 `;
 
-
-
-
-// Your achievements array remains the same
+// Your achievements array with added background images
 const achievements = [
   {
     icon: <FaTrophy />,
     title: "Smart India Hackathon'23 Winner",
     description: "secured first place in the prestigious Smart India Hackathon, organized under the Ministry of Jal Shakti.",
-    link: 'https://www.linkedin.com/posts/prince-sharma-047973253_smartindiahackathon-digitalabrdruids-sih2023-activity-7144621869306945536-VaMe?utm_source=share&utm_medium=member_desktop' // Example link
+    link: 'https://www.linkedin.com/posts/prince-sharma-047973253_smartindiahackathon-digitalabrdruids-sih2023-activity-7144621869306945536-VaMe?utm_source=share&utm_medium=member_desktop',
+    backgroundImage: sih // Using the imported SIH image
   },
   {
     icon: <FaMedal />,
     title: "IDEATHON 2.0 3rd Position",
     description: "secured 3rd place in the Ideathon 2.0 Hackathon at ABESIT, competing among all 2nd-year students.",
-    link: 'https://www.linkedin.com/posts/prince-sharma-047973253_reactjs-firebase-developer-activity-7154081852335525888-J5fU/?utm_source=share&utm_medium=member_desktop' // Example link
-  },
-  {
-    icon: <FaAward />,
-    title: " Core Member - Web Developer @GDGC ABESIT'24",
-    description: "I’m proud to be a Core Member of the Web Development team at GDGC ABESIT'24, contributing to innovative projects.",
-    link: 'https://www.linkedin.com/posts/prince-sharma-047973253_googledevelopers-gdsc-abesit-activity-7245896128531996672-z9zn?utm_source=share&utm_medium=member_desktop' // Example link
-  },
-  {
-    icon: <FaCertificate />,
-    title: "300+ DSA Problems Solved on GeeksForGeeks",
-    description: "I solved 300+ DSA problems on GeeksForGeeks, improving my problem-solving skills and understanding of algorithms.",
-    link: 'https://www.geeksforgeeks.org/user/prince128n7xq/' // Example link
+    link: 'https://www.linkedin.com/posts/prince-sharma-047973253_reactjs-firebase-developer-activity-7154081852335525888-J5fU/?utm_source=share&utm_medium=member_desktop',
+    backgroundImage: ideathon // Replace with your actual image
   },
   {
     icon: <IoMdRocket />,
     title: "ISRO SIH'24 - Top 47 Team",
     description: "Out of thousands of participants, we ranked among the top 47 teams in India for ISRO's problem statements.",
-    link: 'https://www.linkedin.com/posts/prince-sharma-047973253_sih2024-techfixer-isro-activity-7277622696543186944-aGt4/?utm_source=share&utm_medium=member_desktop' // Example link
+    link: 'https://www.linkedin.com/posts/prince-sharma-047973253_sih2024-techfixer-isro-activity-7277622696543186944-aGt4/?utm_source=share&utm_medium=member_desktop',
+    backgroundImage: sih24 // Replace with your actual image
+  },
+  {
+    icon: <FaAward />,
+    title: " Core Member - Web Developer @GDGC ABESIT'24",
+    description: "I'm proud to be a Core Member of the Web Development team at GDGC ABESIT'24, contributing to innovative projects.",
+    link: 'https://www.linkedin.com/posts/prince-sharma-047973253_googledevelopers-gdsc-abesit-activity-7245896128531996672-z9zn?utm_source=share&utm_medium=member_desktop',
+    backgroundImage: gdgc // Replace with your actual image
   },
   {
     icon: <PiCodeThin />,
     title: "Code-A-Thon 3.0 2nd Position",
     description: "secured the Consolation Prize in the CSE Department's Code-A-Thon 3.0 during my 3rd year at ABESIT",
-    link: 'https://www.linkedin.com/posts/prince-sharma-047973253_codeathon-teamwork-disastermanagement-activity-7278487141259661316-8a7t/?utm_source=share&utm_medium=member_desktop' // Example link
+    link: 'https://www.linkedin.com/posts/prince-sharma-047973253_codeathon-teamwork-disastermanagement-activity-7278487141259661316-8a7t/?utm_source=share&utm_medium=member_desktop',
+    backgroundImage: codeathon // Replace with your actual image
+  },
+  {
+    icon: <FaCertificate />,
+    title: "300+ DSA Problems Solved on GeeksForGeeks",
+    description: "I solved 300+ DSA problems on GeeksForGeeks, improving my problem-solving skills and understanding of algorithms.",
+    link: 'https://www.geeksforgeeks.org/user/prince128n7xq/',
+    backgroundImage: gfg // Replace with your actual image
   },
   // ... other achievements
 ];
 
 const Achievements = () => {
-
   const gridRef = useRef(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
@@ -303,7 +356,10 @@ const Achievements = () => {
         />
         <AchievementsGrid ref={gridRef}>
           {achievements.map((achievement, index) => (
-            <AchievementCard key={index}>
+            <AchievementCard 
+              key={index} 
+              backgroundImage={achievement.backgroundImage}
+            >
               <CardContent>
                 <IconWrapper>{achievement.icon}</IconWrapper>
                 <AchievementTitle>{achievement.title}</AchievementTitle>
