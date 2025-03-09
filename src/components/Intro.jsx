@@ -5,7 +5,7 @@ import styles from './style.module.css';
 import img from '../assets/me.jpeg';
 import CertificatesModal from './CertificatesModal';
 import { FaInstagram, FaLinkedin, FaTwitter, FaPhone, FaEnvelope,  } from 'react-icons/fa';
-import { HiMiniSpeakerWave } from "react-icons/hi2";
+import { HiMiniSpeakerWave, HiMiniSpeakerXMark } from "react-icons/hi2"; // Import mute icon
 import { FaGithub } from 'react-icons/fa6';
 
 const typewriter = keyframes`
@@ -207,6 +207,7 @@ const CloseButton = styled.button`
 `;
 
 const ResumeContent = styled.div`
+  font-size : 0.7rem;
   margin-top: 2rem;
   a{
     text-decoration: none;
@@ -311,6 +312,40 @@ const Intro = () => {
   const [showHighlight, setShowHighlight] = useState(false);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [isCertificatesOpen, setIsCertificatesOpen] = useState(false);
+  
+
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const synth = window.speechSynthesis;
+  let utterance = null;
+
+  const text = "Hi, I'm Prince Sharma, a tech enthusiast, problem solver, and creative thinker. As a Smart India Hackathon 2023 Winner and SIH 2024 (ISRO) Finalist, I thrive on innovation and real-world impact. I’m also a Core Member at GDGC 2024, actively contributing to the tech community. My expertise spans MERN stack development, Machine Learning (Python), Flask, Firebase, MySQL, and Kali Linux. Beyond coding, I’m passionate about music and love playing the guitar in my free time. Traveling fuels my creativity, and I enjoy exploring new places and perspectives. Always eager to learn, build, and make an impact! 🚀🎸🌍";
+
+  const handleSpeech = () => {
+    if (!("speechSynthesis" in window)) {
+      alert("Speech synthesis not supported in this browser.");
+      return;
+    }
+
+    if (synth.speaking) {
+      if (isPaused) {
+        synth.resume(); // Resume speech if paused
+        setIsPaused(false);
+      } else {
+        synth.pause(); // Pause speech if playing
+        setIsPaused(true);
+      }
+    } else {
+      utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "en-US";
+      utterance.onend = () => setIsSpeaking(false); // Reset when speech ends
+
+      synth.speak(utterance);
+      setIsSpeaking(true);
+      setIsPaused(false);
+    }
+  };
+
 
   useEffect(() => {
     const timer = setTimeout(() => setShowHighlight(true), 3000);
@@ -325,16 +360,6 @@ const Intro = () => {
     setIsCertificatesOpen(!isCertificatesOpen);
   };
 
-
-  const speak = (text) => {
-    if ('speechSynthesis' in window) {
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'en-US'; // Set the language
-      window.speechSynthesis.speak(utterance);
-    } else {
-      alert('Speech synthesis not supported in this browser.');
-    }
-  };
 
   return (
     <>
@@ -364,11 +389,11 @@ const Intro = () => {
 
         <br />
         Beyond coding, I’m passionate about music and love playing the guitar in my free time. Traveling fuels my creativity, and I enjoy exploring new places and perspectives. Always eager to learn, build, and make an impact! 🚀🎸🌍
-        <button style={buttonStyle} onClick={() => speak("Hi, I'm Prince Sharma, a tech enthusiast, problem solver, and creative thinker. As a Smart India Hackathon 2023 Winner and SIH 2024 (ISRO) Finalist, I thrive on innovation and real-world impact. I’m also a Core Member at GDGC 2024, actively contributing to the tech community. My expertise spans MERN stack development, Machine Learning (Python), Flask, Firebase, MySQL, and Kali Linux.Beyond coding, I’m passionate about music and love playing the guitar in my free time. Traveling fuels my creativity, and I enjoy exploring new places and perspectives. Always eager to learn, build, and make an impact! 🚀🎸🌍")}>
-          <span style={iconStyle} >
-            <HiMiniSpeakerWave />
-          </span>
-        </button>
+          <button style={buttonStyle} onClick={handleSpeech}>
+            <span style={iconStyle}>
+              {synth.speaking ? (isPaused ? <HiMiniSpeakerWave /> : <HiMiniSpeakerXMark />) : <HiMiniSpeakerWave />}
+            </span>
+          </button>
       </p>
           
           <button className={styles.resume} onClick={togglePanel}>View Resume</button>

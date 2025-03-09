@@ -140,7 +140,6 @@ const AchievementCard = styled.div`
   border-radius: 10px;
   padding: 1.5rem;
   transition: all 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   height: 100%;
   cursor: pointer;
   display: flex;
@@ -180,7 +179,7 @@ const AchievementCard = styled.div`
 
 
 const AchievementTitle = styled.h3`
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-bottom: 0.5rem;
   color: #333;
   position: relative;
