@@ -4,6 +4,7 @@ import { FaTrophy, FaMedal, FaCertificate, FaAward } from 'react-icons/fa';
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { IoMdRocket } from "react-icons/io";
 import { PiCodeThin } from "react-icons/pi";
+import { IoMdPerson } from "react-icons/io";
 
 // Import your SIH image
 import sih from "../assets/achivements/sih.jpeg";
@@ -12,6 +13,7 @@ import codeathon from "../assets/achivements/codeathon.jpg";
 import sih24 from "../assets/achivements/sih24.jpg";
 import gfg from "../assets/achivements/gfg.png";
 import gdgc from "../assets/achivements/gdgc.png";
+import hackno from "../assets/hackno.jpg"
 
 // Import or define other placeholder images
 // You'll need to replace these with your actual image paths
@@ -287,6 +289,13 @@ const achievements = [
     description: "secured the Consolation Prize in the CSE Department's Code-A-Thon 3.0 during my 3rd year at ABESIT",
     link: 'https://www.linkedin.com/posts/prince-sharma-047973253_codeathon-teamwork-disastermanagement-activity-7278487141259661316-8a7t/?utm_source=share&utm_medium=member_desktop',
     backgroundImage: codeathon // Replace with your actual image
+  },
+  {
+    icon: <IoMdPerson />,
+    title: "Tech Lead in hacknovate 6.0",
+    description: "Led technical setup, event execution, and partnerships. Actively contribute in Hacknovate 6.0 official website for a seamless user experience",
+    link: 'https://www.linkedin.com/posts/prince-sharma-047973253_hacknovate6-techteam-hackathonjourney-activity-7316085944757932032-x_12?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6c53cBRZ6cLuxGieb3FvPGLWbXCN6UTMs',
+    backgroundImage: hackno // Replace with your actual image
   },
   {
     icon: <FaCertificate />,
