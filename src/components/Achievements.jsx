@@ -225,6 +225,9 @@ const StyledArrowIcon = styled(FaArrowRight)`
   &:hover {
     color: #007BFF;
   }
+  @media (max-width: 760px) {
+    right:1rem; 
+  }
 `;
 
 const StyledLeftArrowIcon = styled(FaArrowLeft)`
