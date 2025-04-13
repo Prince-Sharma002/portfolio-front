@@ -356,9 +356,9 @@ const Projects = () => {
       gitLink: "https://github.com/Prince-Sharma002/GeoMesh-Front"
     },
     {
-      title: "Hacknovate 6.0 Website",
+      title: "Hacknovate 6.0 official Website",
       description: "Developed the official website for Hacknovate 6.0.The platform served as a hub for event details, registrations, and updates",
-      tech: ["Next.js", "acentricity ui","Tailwindcss", "Javascript" ],
+      tech: ["React.js", "Tailwindcss","Framer Motion", "Magic UI" ],
       image: hacknovate,
       appLink: "https://hacknovate6-0.vercel.app/",
       gitLink: "https://github.com/Prince-Sharma002/Hacknovate6.0"

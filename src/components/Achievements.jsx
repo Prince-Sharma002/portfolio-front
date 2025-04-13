@@ -32,7 +32,7 @@ const AchievementsSection = styled.section`
   overflow: hidden; // Ensure no scrollbar appears outside the section
   
   @media (max-width: 760px) {
-   width:21rem;
+   width:24rem;
   }
 `;
 
@@ -54,7 +54,7 @@ const SectionTitle = styled.h2`
   }
 
   @media (max-width: 760px) {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 `;
 
@@ -211,7 +211,7 @@ const AchievementDescription = styled.p`
 
 const StyledArrowIcon = styled(FaArrowRight)`
   position: absolute;
-  right: 1rem;
+  right: -2rem;
   color: gray;
   font-size: 2rem;
   top: 50%;
@@ -229,7 +229,7 @@ const StyledArrowIcon = styled(FaArrowRight)`
 
 const StyledLeftArrowIcon = styled(FaArrowLeft)`
   position: absolute;
-  left: 1rem;
+  left: -2rem;
   color: gray;
   font-size: 2rem;
   top: 50%;
