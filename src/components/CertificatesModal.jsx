@@ -9,6 +9,7 @@ import python from '../assets/python.png';
 import ip from '../assets/ip.jpeg';
 import isro from '../assets/isro.jpeg';
 import codeathon from '../assets/codeathon.jpeg';
+import hacknovate from "../assets/hacknovate6.jpg"
 
 const slideUp = keyframes`
   from {
@@ -288,13 +289,26 @@ const CertificatesModal = ({ isOpen, onClose }) => {
     },
     { 
       id: 5, 
+      title: "Hacknovate 6.0 Tech Lead", 
+      date: "2025-03-05", 
+      image: hacknovate,
+      linkdinLink : "https://www.linkedin.com/posts/prince-sharma-047973253_hacknovate6-techteam-hackathonjourney-activity-7316085944757932032-x_12?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6c53cBRZ6cLuxGieb3FvPGLWbXCN6UTMs",
+      description: (
+        <>
+         Led technical setup, event execution, and partnerships. Actively contribute in Hacknovate 6.0 official website for a seamless user experience.
+        </>
+      )
+    },
+
+    { 
+      id: 6, 
       title: "Basic of Python Completion", 
       date: "2023-08-31", 
       image: python,
       description: "Completed comprehensive Python programming course covering fundamentals and advanced concepts"
     },
     { 
-      id: 6, 
+      id: 7, 
       title: "12th Informatics Practices Topper", 
       date: "2022-06-23", 
       image: ip,
