@@ -7,6 +7,7 @@ import CertificatesModal from './CertificatesModal';
 import { FaInstagram, FaLinkedin, FaTwitter, FaPhone, FaEnvelope,  } from 'react-icons/fa';
 import { HiMiniSpeakerWave, HiMiniSpeakerXMark } from "react-icons/hi2"; // Import mute icon
 import { FaGithub } from 'react-icons/fa6';
+import { CiLink } from "react-icons/ci";
 
 const typewriter = keyframes`
   from { width: 0 }
@@ -248,6 +249,7 @@ const SectionTitle = styled.h4`
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   color: #007bff;
+  font-size : 1.2rem;
 `;
 
 // certificates
@@ -376,7 +378,7 @@ const Intro = () => {
           </AvatarWrapper>
         </AvatarContainer>
         
-          <p>I'm Prince Sharma</p>
+          <p >I'm Prince Sharma</p>
           <AnimatedTitle className={showHighlight ? 'highlight' : ''}>
             Creative Developer & Designer
           </AnimatedTitle>
@@ -404,16 +406,50 @@ const Intro = () => {
       <SidePanel className={isPanelOpen ? 'open' : ''}>
         <CloseButton onClick={togglePanel}>&times;</CloseButton>
         <ResumeContent>
-          <h2>Prince Sharma</h2>
-          <p> <strong> Contact :</strong> <FaEnvelope /> <a style={{ textDecoration : "none" ,  }} href="mailto:prince12845sharma@gmail.com?subject=Contact me%20is%20I like to hear you">    prince12845sharma@gmail.com   </a> | <FaPhone /> (+91) 9354718323 </p>
+        <h2
+            style={{
+              fontSize: "1.2rem",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            Prince Sharma
+            <span
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginLeft: "0.5rem"
+              }}
+            >
+              <a
+                href="https://www.canva.com/design/DAGlXVoluV0/rjxtHZJtZvF8YJH5mHNmSA/view?utm_content=DAGlXVoluV0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1bbb78745b"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "flex", alignItems: "center" }}
+              >
+                <CiLink />
+              </a>
+            </span>
+        </h2>
+
+          <p>
+            <strong>Contact:</strong> <FaEnvelope /> 
+            <a style={{ textDecoration: "none" }} href="mailto:prince12845sharma@gmail.com?subject=Contact me%20is%20I like to hear you">
+              prince12845sharma@gmail.com
+            </a> 
+            | <FaPhone /> 
+            <a style={{ textDecoration: "none", color: "inherit" }} href="https://wa.me/919354718323" target="_blank" rel="noopener noreferrer">
+              (+91) 9354718323
+            </a>
+          </p>
           <p> <strong> Github :</strong> <FaGithub/>  <a href='https://github.com/Prince-Sharma002'> https://github.com/Prince-Sharma002 </a> </p>
           <p> <strong> Linkedin :</strong> <FaLinkedin/> <a href="https://www.linkedin.com/in/prince-sharma-047973253/"> www.linkedin.com/in/prince-sharma-047973253 </a>  </p>
-
+          
           <br />
 
           <SectionTitle>Skills</SectionTitle>
           <ul>
-            <li>Web Development: MERN Stack, Flask, Bootstrap, Tailwind CSS</li>
+            <li>Web Development: MERN Stack, Next.js, Flask, Tailwind CSS, Bootstrap</li>
             <li>Programming Languages: C, C++, JavaScript, Python, Java, SQL</li>
             <li>Machine Learning: Python-based ML development</li>
             <li>Backend & Database: Firebase, MongoDB, MySQL</li>
@@ -478,6 +514,14 @@ Developed SegMap, an interactive map designed for disaster management and enviro
                 <li>
                   <p> <strong> 2024 GDGC ABESIT Core Member  </strong></p>
                   <p>Created the official ABESIT GDGC’24  website  and organized web development events to foster innovation and learning. </p>
+                  <a href="https://gdgc-abesit.com/" target="_blank" rel="noopener noreferrer">Website Link</a>
+                </li>
+                <li>
+                  <p> <strong>Tech Lead in hacknovate 6.0</strong> </p>
+                  <p>
+                  Led technical setup, event execution, and partnerships. Actively contribute in Hacknovate 6.0 official website for a seamless user experience
+                  </p>
+                  <a href="https://hacknovate6-0.vercel.app/" target="_blank" rel="noopener noreferrer">Website Link</a>
                 </li>
                 <li>
                   <p> <strong>ISRO SIH'24 - Top 47 Team</strong> </p>

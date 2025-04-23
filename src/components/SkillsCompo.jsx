@@ -51,7 +51,7 @@ const SkillsCompo = () => {
     {
       category: "Programming Languages",
       icon: "💻",
-      items: ["C", "C++", "C#" , "JavaScript", "Java", "Python",  "SQL"],
+      items: ["C", "C++", "C#" , "JavaScript", "Python",  "Java",  "SQL"],
       color: "#22C55E",
       shadowColor: "rgba(34, 197, 94, 0.5)"
     },

@@ -35,7 +35,7 @@ const Section = styled.section`
   }
 
   &::-webkit-scrollbar-track {
-    background:rgb(255, 157, 230);
+    background:rgb(255, 254, 255);
     border-radius: 10px;
   }
 
@@ -97,10 +97,13 @@ const ProjectCard = styled.div`
 `;
 
 
+
+
 const ProjectImage = styled.div`
   position: relative;
   height: 200px;
   overflow: hidden;
+  cursor: pointer; // Add cursor pointer on hover
 
   &::after {
     content: '';
@@ -115,7 +118,7 @@ const ProjectImage = styled.div`
     z-index: 1;
   }
 
-  ${ProjectCard}:hover &::after {
+  &:hover::after {
     opacity: 1;
   }
 
@@ -126,8 +129,8 @@ const ProjectImage = styled.div`
     transition: transform 0.6s ease;
   }
 
-  ${ProjectCard}:hover img {
-    transform: scale(1.1);
+  &:hover img {
+    transform: scale(1.2); // More noticeable zoom effect
   }
 `;
 
