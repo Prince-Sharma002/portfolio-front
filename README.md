@@ -26,7 +26,7 @@ Welcome to my personal **Developer Portfolio** built with **React.js**! This pro
 ## 🖼️ Preview
 
 You can check out the live version of my portfolio here:  
-👉 [Visit My Portfolio]([https://your-portfolio-link.com](https://portfolio-front-eta.vercel.app/))
+👉 [Visit My Portfolio]([https://your-portfolio-link.com](https://portfolio-front-eta.vercel.app/])
 
 ---
 
