@@ -9,6 +9,7 @@ import missionpillot from "../assets/missionpillot.png";
 import segmap from "../assets/segmap.png";
 import gdgc from "../assets/gdgc.png";
 import hacknovate from "../assets/hacknovate.png"
+import hackemon from "../assets/hackemon.png"
 
 
 import styles from './style.module.css';
@@ -367,20 +368,28 @@ const Projects = () => {
       gitLink: "https://github.com/Prince-Sharma002/Hacknovate6.0"
     },
     {
-      title: "ABESIT GDGC’24 website",
-      description: "the official ABESIT GDGC’24 website and organized web development events to foster innovation and learning.",
-      tech: ["Next.js", "acentricity ui","Tailwindcss", "Javascript" ],
-      image: gdgc,
-      appLink: "https://main.d34x8j0y50canp.amplifyapp.com/",
-      gitLink: "https://github.com/GDGC-abesit/gdgc-website"
-    },
-    {
       title: "SOFIA - Advanced Conversational AI Chatbot 🤖",
       description: "A Google PaLM API-based Conversational Chatbot with voice input/output and image processing.",
       tech: ["React.js", "Bootstrap", "Google PaLM API"],
       image: sofia,
       appLink: "https://palmapi-67c47.web.app/",
       articleLink: "https://tinyurl.com/35panaf8"
+    },
+    {
+      title: "SheBuilds Hackemon official website",
+      description: "Developed the official website for SheBuilds Hackemon website .The platform served as a hub for event details, registrations, and updates",
+      tech: ["React.js", "shadcn", "acentricity ui","Tailwindcss", "Javascript" ],
+      image: hackemon,
+      appLink: "https://www.hackemon.dev/",
+      gitLink: "https://github.com/prince12841sharma/hackemon-website"
+    },
+    {
+      title: "ABESIT GDGC’24 website",
+      description: "the official ABESIT GDGC’24 website and organized web development events to foster innovation and learning.",
+      tech: ["Next.js", "acentricity ui","Tailwindcss", "Javascript" ],
+      image: gdgc,
+      appLink: "https://main.d34x8j0y50canp.amplifyapp.com/",
+      gitLink: "https://github.com/GDGC-abesit/gdgc-website"
     },
     {
       title: "Weather Assistant 🌤️",
