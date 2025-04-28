@@ -96,9 +96,7 @@ const AcademicComponent = () => {
       fontWeight: 'bold',
       textAlign: 'center',
       marginBottom: '1rem',
-      background: 'linear-gradient(to right, #4299e1, #4299e1)',
-      WebkitBackgroundClip: 'text',
-      WebkitTextFillColor: 'transparent',
+      color:"black",
       animation: 'fadeIn 0.5s ease-out',
     },
     timeline: {
