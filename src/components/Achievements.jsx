@@ -149,6 +149,7 @@ const AchievementCard = styled.div`
   min-height: 250px; /* Ensure consistent height */
   position: relative;
   overflow: hidden;
+  border: 2px solid gray;
 
   &::before {
     content: '';
@@ -181,15 +182,15 @@ const AchievementCard = styled.div`
 
 
 const AchievementTitle = styled.h3`
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #333;
   position: relative;
   z-index: 2;
-  font-weight: bold;
+  font-weight: bolder;
 
   @media (max-width: 760px) {
-    font-size: 0.8rem;  
+    font-size: 1rem;  
   }
 `;
 

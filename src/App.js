@@ -12,6 +12,7 @@ import SkillsCompo from './components/SkillsCompo';
 import AcademicComponent from './components/AcademicComponent';
 import styles from './App.module.css';
 import ProjectBucket from './components/ProjectBucket';
+import ExperienceTimeline from './components/ExperienceTimeline';
 
 import { Theme } from "@radix-ui/themes";
 const App = () => {
@@ -25,7 +26,7 @@ const App = () => {
       <AcademicComponent />
       <Hobbies />
       <Achievements />
-      
+      <ExperienceTimeline />
       <Footer />
       <ToastContainer />
     </div>
