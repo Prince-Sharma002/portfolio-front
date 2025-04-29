@@ -147,7 +147,7 @@ export default function ExperienceTimeline() {
               }}
             >
               <div style={{
-                width: isMobile ? "100%" : "42%",
+                width: isMobile ? "80%" : "42%",
                 padding: "2rem",
                 borderRadius: "1rem",
                 boxShadow: "0 10px 30px rgba(0, 0, 0, 0.08)",
@@ -206,7 +206,7 @@ export default function ExperienceTimeline() {
                     {exp.icon}
                   </div>
                   <h3 style={{
-                    fontSize: "1.35rem",
+                    fontSize: isMobile ?  "1rem" : "1.35rem" ,
                     fontWeight: "700",
                     color: "#222"
                   }}>
@@ -216,7 +216,7 @@ export default function ExperienceTimeline() {
                 
                 {/* Company */}
                 <h4 style={{
-                  fontSize: "1.1rem",
+                  fontSize:  "1.1rem",
                   fontWeight: "600",
                   color: "#444",
                   marginLeft: "2.75rem",
@@ -251,7 +251,7 @@ export default function ExperienceTimeline() {
                   margin: "1.25rem 0",
                   color: "#555",
                   lineHeight: "1.7",
-                  fontSize: "0.95rem"
+                  fontSize: isMobile ? "0.8rem" : "0.95rem"
                 }}>
                   {exp.description}
                 </p>
