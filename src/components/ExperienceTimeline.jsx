@@ -89,7 +89,7 @@ export default function ExperienceTimeline() {
         <Briefcase 
           size={32} 
           style={{
-            color: "#FF69B4",
+            color: "black",
             marginRight: "1rem"
           }}
         />
@@ -97,12 +97,8 @@ export default function ExperienceTimeline() {
           fontSize: "2.5rem",
           fontWeight: "800",
           textAlign: "center",
-          color: "#222",
+          color: "black",
           padding: "0.5rem",
-          backgroundImage: "linear-gradient(135deg, #FF69B4, #00CED1)",
-          backgroundClip: "text",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
           textShadow: "0 2px 10px rgba(0,0,0,0.05)"
         }}>
           Professional Experience
