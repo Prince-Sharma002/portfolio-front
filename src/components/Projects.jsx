@@ -36,12 +36,12 @@ const Section = styled.section`
   }
 
   &::-webkit-scrollbar-track {
-    background:rgb(255, 254, 255);
+    background:white;
     border-radius: 10px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #888;
+    background: black;
     border-radius: 10px;
   }
 

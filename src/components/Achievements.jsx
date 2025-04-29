@@ -40,7 +40,7 @@ const SectionTitle = styled.h2`
   text-align: center;
   margin-bottom: 3rem;
   position: relative;
-  color: rgb(63, 63, 63);
+  color: black;
   font-size: 2.5rem;
   font-weight: bolder;
 

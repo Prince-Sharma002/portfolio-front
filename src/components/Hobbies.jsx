@@ -5,10 +5,10 @@ import { MdOutlineArticle } from "react-icons/md";
 
 const Hobbies = () => {
   const hobbies = [
-    { name: 'Guitar', icon: <Guitar />, color: 'rgb(59, 131, 246)' },
-    { name: 'Article Writing', icon: <Book />, color: 'rgb(34, 197, 94)' },
-    { name: 'Chess', icon: <Square />, color: 'rgb(169, 85, 247)' },
     { name: 'Sketch', icon: <PenTool />, color: 'rgb(249, 116, 22)' },
+    { name: 'Chess', icon: <Square />, color: 'rgb(169, 85, 247)' },
+    { name: 'Article Writing', icon: <Book />, color: 'rgb(34, 197, 94)' },
+    { name: 'Guitar', icon: <Guitar />, color: 'rgb(59, 131, 246)' },
     { name: 'Photography', icon: <Camera />, color: 'rgb(255, 40, 173)' },
   ];
   
