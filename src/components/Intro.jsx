@@ -387,7 +387,7 @@ const Intro = () => {
           <p style={{ marginTop: "2rem" , 
             fontSize : "0.8rem",
           }}>
-         A tech enthusiast, problem solver, and creative thinker. As a <strong> Smart India Hackathon 2023 Winner </strong> and <strong> SIH 2024 (ISRO) </strong> Finalist, I thrive on innovation and real-world impact. I’m also a <strong> Core Member at GDGC 2024 </strong>, actively contributing to the tech community. My expertise spans MERN stack development, Machine Learning (Python), Flask, Firebase, MySQL, and Kali Linux. 
+         A tech enthusiast, problem solver, and creative thinker. As a <strong> Smart India Hackathon 2023 Winner </strong> and <strong> SIH 2024 (ISRO) </strong> Finalist, I thrive on innovation and real-world impact. I’m also a <strong> Core Member at GDGC 2024 </strong>, actively contributing to the tech community. My expertise spans MERN stack development, Next.js, Machine Learning (Python), Flask, Firebase, MySQL, PostgreSQL and Kali Linux. 
 
         <br />
         Beyond coding, I’m passionate about music and love playing the guitar in my free time. Traveling fuels my creativity, and I enjoy exploring new places and perspectives. Always eager to learn, build, and make an impact! 🚀🎸🌍
@@ -422,7 +422,7 @@ const Intro = () => {
               }}
             >
               <a
-                href="https://www.canva.com/design/DAGlXVoluV0/rjxtHZJtZvF8YJH5mHNmSA/view?utm_content=DAGlXVoluV0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1bbb78745b"
+                href="https://www.canva.com/design/DAGgk5jIHls/c6vMB_MSsfVjTjJJPaWP-A/view?utm_content=DAGgk5jIHls&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4a025a3eed"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ display: "flex", alignItems: "center" }}
@@ -450,9 +450,9 @@ const Intro = () => {
           <SectionTitle>Skills</SectionTitle>
           <ul>
             <li>Web Development: MERN Stack, Next.js, Flask, Tailwind CSS, Bootstrap</li>
-            <li>Programming Languages: C, C++, JavaScript, Python, Java, SQL</li>
+            <li>Programming Languages: C, C++, JavaScript, Typescript, Python, Java, SQL</li>
             <li>Machine Learning: Python-based ML development</li>
-            <li>Backend & Database: Firebase, MongoDB, MySQL</li>
+            <li>Backend & Database: Firebase, MongoDB, MySQL, PostgreSQL</li>
             <li>Design Tools: Figma</li>
           </ul>
 
@@ -522,6 +522,13 @@ Developed SegMap, an interactive map designed for disaster management and enviro
                   Led technical setup, event execution, and partnerships. Actively contribute in Hacknovate 6.0 official website for a seamless user experience
                   </p>
                   <a href="https://hacknovate6-0.vercel.app/" target="_blank" rel="noopener noreferrer">Website Link</a>
+                </li>
+                <li>
+                  <p> <strong>Tech Lead in Hackemon by SheBuilds</strong> </p>
+                  <p>
+                  Managed tech setup, events, and partnerships. Build Hackemon website for better user experience.
+                  </p>
+                  <a href="https://hackemon.dev/" target="_blank" rel="noopener noreferrer">Website Link</a>
                 </li>
                 <li>
                   <p> <strong>ISRO SIH'24 - Top 47 Team</strong> </p>

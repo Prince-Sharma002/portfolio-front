@@ -18,7 +18,7 @@ export default function ExperienceTimeline() {
       skills: ["Next.js", "Accentricity UI", "Tailwind CSS", "JavaScript"],
       color: "#FF69B4", // Hot Pink
       icon: <Globe size={20} />,
-      achievements: ["Led a team of 5 developers", "Improved site performance by 40%", "Organized 2 successful events"]
+      achievements: ["Integrated real-time event updates", "Improved site performance by 40%", "Organized 2 successful events"]
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ export default function ExperienceTimeline() {
       period: "Feb 2025 - Apr 2025",
       description: "Engineered the official SheBuilds Hackathon website that served as the central hub for event details, participant registrations, and real-time updates. Implemented responsive design principles ensuring optimal user experience across all devices.",
       skills: ["React.js", "Shadcn", "Accentricity UI", "Tailwind CSS", "JavaScript"],
-      color: "rgba(43, 236, 114, 0.59)", // Green with opacity
+      color: "rgb(43, 236, 114)", // Green with opacity
       icon: <Code size={20} />,
       achievements: ["Designed a theme-based, visually appealing website.", "Integrated real-time event updates", "Designed mobile-first user interface"]
     },

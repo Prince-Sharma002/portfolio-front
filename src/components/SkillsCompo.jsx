@@ -51,7 +51,7 @@ const SkillsCompo = () => {
     {
       category: "Programming Languages",
       icon: "💻",
-      items: ["C", "C++", "C#" , "JavaScript", "Python",  "Java",  "SQL"],
+      items: ["C", "C++", "JavaScript", "Typescript",  "Python",  "Java",  "SQL"],
       color: "#22C55E",
       shadowColor: "rgba(34, 197, 94, 0.5)"
     },
@@ -65,7 +65,7 @@ const SkillsCompo = () => {
     {
       category: "Database & Tools",
       icon: "🗄️",
-      items: ["MongoDB" ,"Firebase" , "MySQL" , "Postman" , "Git/GitHub" , "Kali Linux" , "Unity" ],
+      items: ["MongoDB" ,"Firebase" , "PostgreSQL", "MySQL" , "Postman" , "Git/GitHub" , "Kali Linux" , "Unity" ],
       color: "#F97316",
       shadowColor: "rgba(249, 115, 22, 0.5)"
     }
