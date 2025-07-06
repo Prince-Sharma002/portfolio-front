@@ -387,7 +387,9 @@ const Intro = () => {
           <p style={{ marginTop: "2rem" , 
             fontSize : "0.8rem",
           }}>
-         A tech enthusiast, problem solver, and creative thinker. As a <strong> Smart India Hackathon 2023 Winner </strong> and <strong> SIH 2024 (ISRO) </strong> Finalist, I thrive on innovation and real-world impact. I’m also a <strong> Core Member at GDGC 2024 </strong>, actively contributing to the tech community. My expertise spans MERN stack development, Next.js, Machine Learning (Python), Flask, Firebase, MySQL, PostgreSQL and Kali Linux. 
+
+A tech enthusiast, problem solver, and creative thinker. As a <strong>Smart India Hackathon 2023 Winner</strong> and <strong>SIH 2024 (ISRO) Finalist</strong>, I thrive on innovation and real-world impact. I'm also a <strong>Core Member at GDGC 2024</strong> and an <strong>intern at DRDO</strong>, actively contributing to the tech community. My expertise spans <strong>MERN stack development</strong>, <strong>Next.js</strong>, <strong>Machine Learning (Python)</strong>, <strong>Flask</strong>, <strong>Firebase</strong>, <strong>MySQL</strong>, <strong>PostgreSQL</strong>, and <strong>Kali Linux</strong>.
+Beyond coding, I'm passionate about <strong>music</strong> and love playing the <strong>guitar</strong> in my free time. <strong>Traveling</strong> fuels my creativity, and I enjoy exploring new places and perspectives. Always eager to learn, build, and make an impact!
 
         <br />
         Beyond coding, I’m passionate about music and love playing the guitar in my free time. Traveling fuels my creativity, and I enjoy exploring new places and perspectives. Always eager to learn, build, and make an impact! 🚀🎸🌍

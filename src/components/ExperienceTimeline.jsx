@@ -132,7 +132,7 @@ export default function ExperienceTimeline() {
           width: "100%",
           gap: "3rem",
         }}>
-          {experiences.map((exp, index) => (
+          {experiences.reverse().map((exp, index) => (
             <div 
               key={exp.id}
               style={{
