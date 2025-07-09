@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { 
   Briefcase, Calendar, Award, Code, 
   Globe, Server, Database, Layout, ArrowUp,
-  CheckCircle, Monitor, Users, Zap
+  CheckCircle, Monitor, Users, Zap, Brain
 } from 'lucide-react';
 
 export default function ExperienceTimeline() {
@@ -41,6 +41,17 @@ export default function ExperienceTimeline() {
       color: "#00CED1", // Dark Turquoise
       icon: <Server size={20} />,
       achievements: ["Led a team of 5 developers", "Implemented a fully responsive and user-friendly website.", "Designed a theme-based, visually appealing website."]
+    },
+    {
+      id: 1,
+      title: "Project Intern",
+      company: "DRDO",
+      period: "Jun 2025 - July 2025",
+      description: "Developed an AI fairness detection system to ensure unbiased model behavior and ethical AI deployment. Conducted in-depth analysis on model interpretability and fairness metrics, contributing to secure and responsible AI systems at DRDO.",
+      skills: ["Python", "Machine Learning", "Fairness Metrics", "Flask", "React.js"],
+      color: "#4682B4", // Steel Blue
+      icon: <Brain size={20} />, // You can change icon if needed
+      achievements: ["Designed and implemented fairness detection module", "Improved model transparency and reliability", "Collaborated with senior scientists on research"]
     },
   ];
 

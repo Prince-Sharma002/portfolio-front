@@ -122,7 +122,7 @@ const ProjectBucket = () => {
             
             }}
       >
-        <h1 style={{position : "relative" , bottom : "30px"}}>Mini Projects</h1>
+        <h1 className='font-extrabold' style={{position : "relative" , bottom : "30px"}}>Mini Projects</h1>
         {icons.map((icon, index) => (
           <IconContainer
             key={index}

@@ -12,7 +12,7 @@ import ideathon from "../assets/achivements/ideathon.jpg";
 import codeathon from "../assets/achivements/codeathon.jpg";
 import sih24 from "../assets/achivements/sih24.jpg";
 import gfg from "../assets/achivements/gfg.png";
-import gdgc from "../assets/achivements/gdgc.png";
+import gdgc from "../assets/achivements/gdgc.jpg";
 import hackno from "../assets/hackno.jpg"
 
 // Import or define other placeholder images

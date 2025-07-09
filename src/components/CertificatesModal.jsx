@@ -10,6 +10,10 @@ import ip from '../assets/ip.jpeg';
 import isro from '../assets/isro.jpeg';
 import codeathon from '../assets/codeathon.jpeg';
 import hacknovate from "../assets/hacknovate6.jpg"
+import drdo from "../assets/DRDO.jpg"
+import cloud from "../assets/AWS Cloud Certificate.jpg"
+import devops from "../assets/AWS DevOps.jpg"
+import container from "../assets/Container Certificate.jpg"
 
 const slideUp = keyframes`
   from {
@@ -225,6 +229,20 @@ const CertificatesModal = ({ isOpen, onClose }) => {
       ),
     },
     { 
+      id: 1, 
+      title: "Project Intern @DRDO", 
+      date: "2025-06-06", 
+      image: drdo,
+      description: (
+        <>
+          <br /><br />
+          <strong>Project:</strong> AI Fairness Detection System <br />
+          <strong>Solution:</strong> Designed an AI fairness evaluation system to detect bias in ML models. <br />
+          <strong>Tech Stack:</strong>  Flask, AIF360, React, and statistical metrics to analyze bias across protected attributes <br />
+        </>
+      ),
+    },
+    { 
       id: 2, 
       title: "IDEATHON 2.0 3rd Position", 
       date: "2024-1-17", 
@@ -296,6 +314,29 @@ const CertificatesModal = ({ isOpen, onClose }) => {
       description: (
         <>
          Led technical setup, event execution, and partnerships. Actively contribute in Hacknovate 6.0 official website for a seamless user experience.
+        </>
+      )
+    },
+    { 
+      id: 5, 
+      title: "AWS Cloud Essentials", 
+      date: "2025-07-08", 
+      image: cloud,
+      description: (
+        <>
+        Architected and maintained AWS cloud solutions, leveraging services like EC2, S3, and Lambda to enhance scalability, reliability, and cost efficiency across projects.
+        </>
+      )
+    },
+    { 
+      id: 5, 
+      title: "AWS DevOps", 
+      date: "2025-07-08", 
+      image: devops,
+      description: (
+        <>
+          Designed and implemented CI/CD pipelines using AWS DevOps tools, optimizing deployments and infrastructure automation. Improved system efficiency, reliability, and scalability for robust application delivery.     
+          
         </>
       )
     },
