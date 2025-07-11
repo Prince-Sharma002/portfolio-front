@@ -434,12 +434,14 @@ Beyond coding, I'm passionate about <strong>music</strong> and love playing the 
             </span>
         </h2>
 
-          <p>
-            <strong>Contact:</strong> <FaEnvelope /> 
-            <a style={{ textDecoration: "none" }} href="mailto:prince12845sharma@gmail.com?subject=Contact me%20is%20I like to hear you">
-              prince12845sharma@gmail.com
-            </a> 
-            | <FaPhone /> 
+          <p className='flex flex-row'>
+            <div className='flex flex-row justify-center items-center gap-2'>
+              <strong>Contact:</strong> <FaEnvelope /> 
+              <a style={{ textDecoration: "none" }} href="mailto:prince12845sharma@gmail.com?subject=Contact me%20is%20I like to hear you">
+                prince12845sharma@gmail.com
+              </a> 
+            </div>
+            <span> | </span>   <FaPhone /> 
             <a style={{ textDecoration: "none", color: "inherit" }} href="https://wa.me/919354718323" target="_blank" rel="noopener noreferrer">
               (+91) 9354718323
             </a>

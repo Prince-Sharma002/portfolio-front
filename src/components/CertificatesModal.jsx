@@ -13,6 +13,7 @@ import hacknovate from "../assets/hacknovate6.jpg"
 import drdo from "../assets/DRDO.jpg"
 import cloud from "../assets/AWS Cloud Certificate.jpg"
 import devops from "../assets/AWS DevOps.jpg"
+import postman from "../assets/Postman.png"
 import container from "../assets/Container Certificate.jpg"
 
 const slideUp = keyframes`
@@ -340,7 +341,18 @@ const CertificatesModal = ({ isOpen, onClose }) => {
         </>
       )
     },
-
+    { 
+      id: 5, 
+      title: "Postman API Fundamentals", 
+      date: "2025-07-08", 
+      image: postman,
+      description: (
+        <>
+    Mastered API design, testing, and documentation using Postman. Built and automated workflows, created robust collections, and improved API reliability and collaboration efficiency.
+          
+        </>
+      )
+    },
     { 
       id: 6, 
       title: "Basic of Python Completion", 
